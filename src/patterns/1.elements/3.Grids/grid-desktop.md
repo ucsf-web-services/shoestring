@@ -1,6 +1,8 @@
 ---
-name: Gird desktop
----
+
+name: Grid desktop
+------------------
+
 <div class="row row--demo">
   <div class="columns one">one</div>
   <div class="columns one">one</div>
