@@ -3,7 +3,7 @@ name: Thumbnail Images
 ---
 <!-- Thumbnail image with title and link-->
 <figure class="media-item media-item--light">
-    <a href="#"><img src="http://placebeet.com/400x400" alt=""/>
+    <a href="#"><img src="assets/images/beetlejuice.jpg" alt=""/>
         <figcaption>
           <h3>Padme Amidala</h3>
           <p>Learn more <em class="fa fa-long-arrow-right fa-lg fa-right"></em></p>
@@ -14,7 +14,7 @@ name: Thumbnail Images
 
 <!-- Thumbnail image with overlay-->
 <figure class="media-item media-item--light media-item--overlay">
-    <a href="#"><img src="http://placebeet.com/400x400" alt=""/>
+    <a href="#"><img src="assets/images/beetlejuice.jpg" alt=""/>
         <div class="media-overlay"></div>
         <figcaption>
           <h3>Padme Amidala</h3>
