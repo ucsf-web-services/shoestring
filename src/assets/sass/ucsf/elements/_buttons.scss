@@ -19,7 +19,7 @@
 
 .btn {
   border: 1px solid transparent;
-  border-radius: 2px;
+  //border-radius: 2px;
   border-radius: $button-border-radius;
   text-decoration: none;
   @include transition(all 0.1s ease-in);
@@ -106,6 +106,7 @@ BUTTONS.CSS
 .btn--secondary{
 
   @include buildButton($button-secondary-background, $button-secondary-border);
+  color: $color-dark !important;
 }
 
 /**
