@@ -170,14 +170,14 @@ $button-border-radius      : $base-radius;
 * Button default
 */
 
-$button-default-background : #EDEEF1;
+$button-default-background : $color-light-grey;
 $button-default-color: $base-color;
 
 /**
 * Button Primary
 */
 
-$button-primary-background      : $color-primary;
+$button-primary-background: $color-primary;
 $button-primary-border: $color-primary;
 
 /**
