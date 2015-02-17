@@ -14,7 +14,6 @@ var gulp = require('gulp'),
     tree = require('gulp-tree'),
     scriptInject = require('gulp-script-inject'),
     prunehtml = require('gulp-prune-html')
-
 console.log()
 
 var tlr = tinylr()
@@ -48,7 +47,6 @@ gulp.task('tree', function(){
             path: './src/json/'
         }))
         .pipe(gulp.dest('./src/json'))
-
 })
 
 
@@ -61,7 +59,6 @@ gulp.task('injecter', ['jade', 'tree'], function(){
             varname: 'jsonPath'
         }))
         .pipe(gulp.dest('./src'))
-
 })
 
 
@@ -91,7 +88,6 @@ gulp.task('patternsJade', function(){
             path.extname = ".md"
         }))
         .pipe(gulp.dest('./src/patterns'))
-
 })
 
 
@@ -107,6 +103,7 @@ gulp.task('ngtemplatesJade', function(){
             pretty: true
         }))
         .pipe(gulp.dest('./src/assets/js/templates'))
+
 
 })
 
