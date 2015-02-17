@@ -1,5 +1,7 @@
 @mixin buildButton($background, $border, $hover:5%, $focus: 10%){
 
+  text-shadow: 0 1px 1px $color-dark;
+  
   &:hover, &:active, &{
     background: $background;
     border-color: $border;
@@ -19,12 +21,12 @@
 
 .btn {
   border: 1px solid transparent;
-  border-radius: 2px;
   border-radius: $button-border-radius;
   text-decoration: none;
   @include transition(all 0.1s ease-in);
   background: $button-default-background;
   @include rem(margin-bottom, 0.5);
+  color: $color-dark;
 
   .btn--dark {
     border: 1px solid #fff;
@@ -106,6 +108,8 @@ BUTTONS.CSS
 .btn--secondary{
 
   @include buildButton($button-secondary-background, $button-secondary-border);
+  color: $color-dark !important;
+  text-shadow: none;
 }
 
 /**
@@ -157,6 +161,7 @@ BUTTONS.CSS
   &:hover{
     border-color: lighten($button-light-border, 10%);
   }
+  text-shadow: none;
 
 }
 
