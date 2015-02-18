@@ -2895,232 +2895,6 @@ blockquote {
   padding: 1em; }
 
 /*------------------------------------*\
-    FORM ELEMENT STYLES    
-\*------------------------------------*/
-/**
- * Forms
- */
-form {
-  margin-bottom: 24px;
-  margin-bottom: 1.71429rem; }
-
-/**
- * Add border box for input search
- */
-input[type="search"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -ms-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/**
- * Input Elements
- */
-.text-input, textarea {
-  border: 1px #BFBFBF solid;
-  padding: 0.5em 1em;
-  background: #FAFAFA;
-  transition: all 0.1s ease-in;
-  vertical-align: middle;
-  outline: none;
-  width: 100%;
-  border-radius: 5px;
-  font-size: 14px;
-  font-size: 1rem; }
-
-/**
- * Disabled Input
- */
-.text-input[disabled], textarea[disabled] {
-  opacity: 0.5; }
-
-/**
- * Input inverted
- */
-.input-inverted, .nav-bar--inverted .text-input {
-  background: transparent;
-  border-color: #fff;
-  color: #fff; }
-
-/**
- * Medium input
- */
-.input-medium {
-  padding: 0.8em 1em; }
-
-/**
- * Large input
- */
-.input-large {
-  padding: 1em 1em;
-  font-size: 16px;
-  font-size: 1.14286rem; }
-
-/**
- * Input with icons
- */
-.form-control {
-  position: relative;
-  margin-bottom: 18px;
-  margin-bottom: 1.28571rem;
-  /* Icon on the left side */
-  /* Button unstyled */ }
-  .form-control .text-input {
-    padding-right: 35px;
-    margin-bottom: 0; }
-  .form-control .fa {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    margin: 0;
-    margin-top: -6px;
-    height: 15px;
-    color: #BFBFBF; }
-  .form-control.icon-left .text-input {
-    padding-left: 35px;
-    padding-right: inherit; }
-  .form-control.icon-left .fa {
-    left: 10px;
-    right: auto; }
-  .form-control .btn--unstyled {
-    padding: 0;
-    margin: 0;
-    vertical-align: top;
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 100%; }
-
-/**
- * Form control Inline
- */
-.form-control--inline {
-  /* Button */ }
-  .form-control--inline .text-input {
-    width: auto;
-    padding: 0.5em 1em;
-    margin-right: -4.8px;
-    margin-right: -0.34286rem; }
-  .form-control--inline .btn {
-    margin-bottom: 0;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0; }
-
-/**
- * Round text input
- */
-.input-soft {
-  border-radius: 200px; }
-
-/**
- * Margins for Select, File
- */
-select, input[type="file"], input[type="color"], input[type="range"], .label-checkbox, .label-radio, textarea, .text-input {
-  margin-bottom: 18px;
-  margin-bottom: 1.28571rem; }
-
-/**
- * Wide select
- */
-.select-wide {
-  width: 100%; }
-
-/**
- * Checkbox, Radio
- */
-input[type="checkbox"], input[type="radio"] {
-  margin-right: 0.5em; }
-
-/**
- * Label
- */
-label {
-  margin-bottom: 2.4px;
-  margin-bottom: 0.17143rem;
-  font-weight: 600; }
-
-/**
- * Checkbox Display
- */
-.label-checkbox, .label-radio {
-  font-weight: normal;
-  padding-left: 20px; }
-  .label-checkbox input, .label-radio input {
-    float: left;
-    margin-left: -20px;
-    margin-top: 0.35714em;
-    margin-top: 1px \9;
-    /* Internet Explorer 8 Fix */
-    margin-right: 0; }
-
-/**
- * Checkbox Replacement
- */
-/**
- * Inline Input
- */
-.input-inline {
-  width: auto; }
-
-/**
- * Inline Label
- */
-.label-inline {
-  width: auto;
-  display: inline-block;
-  vertical-align: middle;
-  margin-right: 12px;
-  margin-right: 0.85714rem; }
-
-/**
- * Fieldset
- */
-fieldset {
-  border-color: #BFBFBF;
-  padding: 15px; }
-
-/**
- * Error Input
- */
-.input-error {
-  border-color: #EC1848; }
-
-/**
- * Error Label
- */
-.label-error {
-  color: #EC1848;
-  display: inline-block;
-  margin-bottom: 12px;
-  margin-bottom: 0.85714rem;
-  font-size: 13px;
-  font-size: 0.92857rem;
-  font-weight: normal;
-  margin-top: -0.5em;
-  overflow-y: hidden; }
-
-/**
- * Input groups
- */
-.input-group {
-  margin-bottom: 24px;
-  margin-bottom: 1.71429rem; }
-  .input-group .text-input, .input-group textarea {
-    margin-bottom: 0;
-    border-radius: 0;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0; }
-    .input-group .text-input:first-child, .input-group textarea:first-child {
-      border-top-left-radius: 5px;
-      border-top-right-radius: 5px;
-      margin-bottom: -1px; }
-    .input-group .text-input:last-child, .input-group textarea:last-child {
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px; }
-    .input-group .text-input:focus, .input-group textarea:focus {
-      position: relative; }
-
-/*------------------------------------*\
     LINKS.CSS    
 \*------------------------------------*/
 a {
@@ -7388,24 +7162,21 @@ BUTTONS.CSS
 /**
 * Button Primary
 */
-.btn--primary {
-  text-shadow: 0 1px 1px #052049; }
-  .btn--primary:hover, .btn--primary:active, .btn--primary {
-    background: #18A3AC;
-    border-color: #18A3AC;
-    color: #fff; }
-  .btn--primary:hover {
-    background: #1bbac2;
-    border-color: #1bbac2; }
-  .btn--primary:active, .btn--primary:focus {
-    background: #127a7f;
-    border-color: #127a7f; }
+.btn--primary:hover, .btn--primary:active, .btn--primary {
+  background: #18A3AC;
+  border-color: #18A3AC;
+  color: #fff; }
+.btn--primary:hover {
+  background: #1bbac2;
+  border-color: #1bbac2; }
+.btn--primary:active, .btn--primary:focus {
+  background: #127a7f;
+  border-color: #127a7f; }
 
 /**
 * Button Secondary
 */
 .btn--secondary {
-  text-shadow: 0 1px 1px #052049;
   color: #052049 !important;
   text-shadow: none; }
   .btn--secondary:hover, .btn--secondary:active, .btn--secondary {
@@ -7422,72 +7193,63 @@ BUTTONS.CSS
 /**
 * Button Secondary
 */
-.btn--warning {
-  text-shadow: 0 1px 1px #052049; }
-  .btn--warning:hover, .btn--warning:active, .btn--warning {
-    background: #EC1848;
-    border-color: #EC1848;
-    color: #fff; }
-  .btn--warning:hover {
-    background: #f0476e;
-    border-color: #f0476e; }
-  .btn--warning:active, .btn--warning:focus {
-    background: #c11039;
-    border-color: #c11039; }
+.btn--warning:hover, .btn--warning:active, .btn--warning {
+  background: #EC1848;
+  border-color: #EC1848;
+  color: #fff; }
+.btn--warning:hover {
+  background: #f0476e;
+  border-color: #f0476e; }
+.btn--warning:active, .btn--warning:focus {
+  background: #c11039;
+  border-color: #c11039; }
 
 /**
 * Dark button
 */
-.btn--dark {
-  text-shadow: 0 1px 1px #052049; }
-  .btn--dark:hover, .btn--dark:active, .btn--dark {
-    background: #052049;
-    border-color: #052049;
-    color: #fff; }
-  .btn--dark:hover {
-    background: #083579;
-    border-color: #083579; }
-  .btn--dark:active, .btn--dark:focus {
-    background: #020b19;
-    border-color: #020b19; }
+.btn--dark:hover, .btn--dark:active, .btn--dark {
+  background: #052049;
+  border-color: #052049;
+  color: #fff; }
+.btn--dark:hover {
+  background: #083579;
+  border-color: #083579; }
+.btn--dark:active, .btn--dark:focus {
+  background: #020b19;
+  border-color: #020b19; }
 
 /**
 * Button Facebook
 */
-.btn--facebook {
-  text-shadow: 0 1px 1px #052049; }
-  .btn--facebook:hover, .btn--facebook:active, .btn--facebook {
-    background: #5970B3;
-    border-color: #5970B3;
-    color: #fff; }
-  .btn--facebook:hover {
-    background: #7c8fc3;
-    border-color: #7c8fc3; }
-  .btn--facebook:active, .btn--facebook:focus {
-    background: #445a95;
-    border-color: #445a95; }
+.btn--facebook:hover, .btn--facebook:active, .btn--facebook {
+  background: #5970B3;
+  border-color: #5970B3;
+  color: #fff; }
+.btn--facebook:hover {
+  background: #7c8fc3;
+  border-color: #7c8fc3; }
+.btn--facebook:active, .btn--facebook:focus {
+  background: #445a95;
+  border-color: #445a95; }
 
 /**
 * Button Google
 */
-.btn--google {
-  text-shadow: 0 1px 1px #052049; }
-  .btn--google:hover, .btn--google:active, .btn--google {
-    background: #EF2213;
-    border-color: #EF2213;
-    color: #fff; }
-  .btn--google:hover {
-    background: #f24e43;
-    border-color: #f24e43; }
-  .btn--google:active, .btn--google:focus {
-    background: #c2190d;
-    border-color: #c2190d; }
+.btn--google:hover, .btn--google:active, .btn--google {
+  background: #EF2213;
+  border-color: #EF2213;
+  color: #fff; }
+.btn--google:hover {
+  background: #f24e43;
+  border-color: #f24e43; }
+.btn--google:active, .btn--google:focus {
+  background: #c2190d;
+  border-color: #c2190d; }
 
 /**
 * Button light
 */
 .btn--light {
-  text-shadow: 0 1px 1px #052049;
   text-shadow: none; }
   .btn--light:hover, .btn--light:active, .btn--light {
     background: #fff;
@@ -7679,6 +7441,231 @@ BUTTONS.CSS
     position: absolute;
     right: 15px;
     top: 12px; }
+
+/*------------------------------------*\
+    FORM ELEMENT STYLES
+\*------------------------------------*/
+/**
+ * Forms
+ */
+form {
+  margin-bottom: 24px;
+  margin-bottom: 1.71429rem; }
+
+/**
+ * Add border box for input search
+ */
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/**
+ * Input Elements
+ */
+.text-input, textarea {
+  border: 1px #BFBFBF solid;
+  padding: 0.5em 1em;
+  background: #FAFAFA;
+  transition: all 0.1s ease-in;
+  vertical-align: middle;
+  outline: none;
+  width: 100%;
+  font-size: 14px;
+  font-size: 1rem; }
+
+/**
+ * Disabled Input
+ */
+.text-input[disabled], textarea[disabled] {
+  opacity: 0.5; }
+
+/**
+ * Input inverted
+ */
+.input-inverted, .nav-bar--inverted .text-input {
+  background: transparent;
+  border-color: #fff;
+  color: #fff; }
+
+/**
+ * Medium input
+ */
+.input-medium {
+  padding: 0.8em 1em; }
+
+/**
+ * Large input
+ */
+.input-large {
+  padding: 1em 1em;
+  font-size: 16px;
+  font-size: 1.14286rem; }
+
+/**
+ * Input with icons
+ */
+.form-control {
+  position: relative;
+  margin-bottom: 18px;
+  margin-bottom: 1.28571rem;
+  /* Icon on the left side */
+  /* Button unstyled */ }
+  .form-control .text-input {
+    padding-right: 35px;
+    margin-bottom: 0; }
+  .form-control .fa {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    margin: 0;
+    margin-top: -6px;
+    height: 15px;
+    color: #BFBFBF; }
+  .form-control.icon-left .text-input {
+    padding-left: 35px;
+    padding-right: inherit; }
+  .form-control.icon-left .fa {
+    left: 10px;
+    right: auto; }
+  .form-control .btn--unstyled {
+    padding: 0;
+    margin: 0;
+    vertical-align: top;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%; }
+
+/**
+ * Form control Inline
+ */
+.form-control--inline {
+  /* Button */ }
+  .form-control--inline .text-input {
+    width: auto;
+    padding: 0.5em 1em;
+    margin-right: -4.8px;
+    margin-right: -0.34286rem; }
+  .form-control--inline .btn {
+    margin-bottom: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
+
+/**
+ * Round text input
+ */
+.input-soft {
+  border-radius: 200px; }
+
+/**
+ * Margins for Select, File
+ */
+select, input[type="file"], input[type="color"], input[type="range"], .label-checkbox, .label-radio, textarea, .text-input {
+  margin-bottom: 18px;
+  margin-bottom: 1.28571rem; }
+
+/**
+ * Wide select
+ */
+.select-wide {
+  width: 100%; }
+
+/**
+ * Checkbox, Radio
+ */
+input[type="checkbox"], input[type="radio"] {
+  margin-right: 0.5em; }
+
+/**
+ * Label
+ */
+label {
+  margin-bottom: 2.4px;
+  margin-bottom: 0.17143rem;
+  font-weight: 600; }
+
+/**
+ * Checkbox Display
+ */
+.label-checkbox, .label-radio {
+  font-weight: normal;
+  padding-left: 20px; }
+  .label-checkbox input, .label-radio input {
+    float: left;
+    margin-left: -20px;
+    margin-top: 0.35714em;
+    margin-top: 1px \9;
+    /* Internet Explorer 8 Fix */
+    margin-right: 0; }
+
+/**
+ * Checkbox Replacement
+ */
+/**
+ * Inline Input
+ */
+.input-inline {
+  width: auto; }
+
+/**
+ * Inline Label
+ */
+.label-inline {
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 12px;
+  margin-right: 0.85714rem; }
+
+/**
+ * Fieldset
+ */
+fieldset {
+  border-color: #BFBFBF;
+  padding: 15px; }
+
+/**
+ * Error Input
+ */
+.input-error {
+  border-color: #EC1848; }
+
+/**
+ * Error Label
+ */
+.label-error {
+  color: #EC1848;
+  display: inline-block;
+  margin-bottom: 12px;
+  margin-bottom: 0.85714rem;
+  font-size: 13px;
+  font-size: 0.92857rem;
+  font-weight: normal;
+  margin-top: -0.5em;
+  overflow-y: hidden; }
+
+/**
+ * Input groups
+ */
+.input-group {
+  margin-bottom: 24px;
+  margin-bottom: 1.71429rem; }
+  .input-group .text-input, .input-group textarea {
+    margin-bottom: 0;
+    border-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+    .input-group .text-input:first-child, .input-group textarea:first-child {
+      border-top-left-radius: 5px;
+      border-top-right-radius: 5px;
+      margin-bottom: -1px; }
+    .input-group .text-input:last-child, .input-group textarea:last-child {
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px; }
+    .input-group .text-input:focus, .input-group textarea:focus {
+      position: relative; }
 
 /*------------------------------------*\
 ACCORDION.CSS

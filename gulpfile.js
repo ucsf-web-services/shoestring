@@ -33,6 +33,7 @@ gulp.task('sass', function(){
 
     gulp.src(['./src/assets/sass/**/*.scss', '!./src/**/_*'])
         .pipe(sass({
+            sourcemapPath: './',
             sourcemap: true
         }))
         .pipe(gulp.dest('./src/assets/css'))

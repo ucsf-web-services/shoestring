@@ -1,7 +1,5 @@
 @mixin buildButton($background, $border, $hover:5%, $focus: 10%){
 
-  text-shadow: 0 1px 1px $color-dark;
-  
   &:hover, &:active, &{
     background: $background;
     border-color: $border;
