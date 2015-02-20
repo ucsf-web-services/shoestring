@@ -13,7 +13,8 @@ var gulp = require('gulp'),
     rename = require("gulp-rename"),
     tree = require('gulp-tree'),
     scriptInject = require('gulp-script-inject'),
-    prunehtml = require('gulp-prune-html')
+    prunehtml = require('gulp-prune-html'),
+    sourcemaps = require('gulp-sourcemaps')
 console.log()
 
 var tlr = tinylr()
@@ -32,11 +33,10 @@ var livereload = function (evt, filepath) {
 gulp.task('sass', function(){
 
     gulp.src(['./src/assets/sass/**/*.scss', '!./src/**/_*'])
-        .pipe(sass({
-            sourcemapPath: './',
-            sourcemap: true
-        }))
-        .pipe(gulp.dest('./src/assets/css'))
+        .pipe(sourcemaps.init())
+          .pipe(sass())
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest('./src/assets/css'));
 
 })
 

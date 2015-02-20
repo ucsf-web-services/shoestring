@@ -34,7 +34,6 @@ textarea{
     vertical-align: middle;
     outline: none;
     width: 100%;
-    //border-radius: $input-border-radius;
     @include font-size(14px, false);
 
     &:focus{

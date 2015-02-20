@@ -1,7 +1,7 @@
 ---
 
 name: Grid desktop
-------------------
+---
 
 <div class="row row--demo">
   <div class="columns one">one</div>
