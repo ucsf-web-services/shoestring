@@ -281,7 +281,7 @@ html[ng-app]{
     }
 
     a{
-        color: darken($base-ui-color, 20%);
+        color: $color-light-blue;
         text-decoration: none;
         padding: 5px 0;
         display: block;
@@ -290,14 +290,14 @@ html[ng-app]{
 
     a:hover{
 
-        color: $base-color;
+        color: lighten($color-light-blue, 20%);
 
 
     }
 
     .active, .active:hover, .active >a{
-        color: $color-primary;
-        //font-weight: 600;
+        color: $color-light-blue;
+        font-weight: 600;
     }
 
     @include media-query(tablet-desktop){
@@ -391,7 +391,7 @@ $menu-spacing: 20px;
 
     a{
         display: block;
-        color: $color-primary;
+        color: $color-light-blue;
         padding: 3px $menu-spacing;
         text-decoration: none;
     }
@@ -399,7 +399,7 @@ $menu-spacing: 20px;
     a:hover, .active > a{
         background: lighten($color-dark-grey,10%);
 
-        background: $color-primary;color: #fff;
+        background: $color-light-blue;color: #fff;
     }
 }
 

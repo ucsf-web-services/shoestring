@@ -62,7 +62,7 @@ $color-warning: #E74C3C;
 $color-primary: #18A3AC;
 
 
-$color-dark: #052049;
+/*$color-dark: #052049;
 $color-light-blue: #272F4D;
 
 $color-nice-blue: #394264;
@@ -72,6 +72,20 @@ $color-light-grey: #EDEEF1;
 $color-dark-grey: #BDC3C7;
 
 $rich-electric-blue: #178CCB;
+*/
+$color-dark: #052049;
+$color-light-blue: #178CCB;
+//color-nice-blue is being used in the datepicker and should be replaced with color-dark
+$color-nice-blue: $color-dark;
+$color-blue-green: #18A3AC;
+$color-green: #90BD31;
+$color-orange: #F48024;
+$color-purple: #716FB2;
+$color-red: #EC1848;
+$color-yellow: #FFDD00;
+$color-dark-grey: #B4B9BF;
+$color-light-grey: #D1D3D3;
+
 
 
 /*------------------------------------*\
