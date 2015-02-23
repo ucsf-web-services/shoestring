@@ -1,20 +1,20 @@
-var gulp = require('gulp'),
-    gutil = require('gulp-util'),
-    jade = require('gulp-jade'),
-    sass = require('gulp-sass'),
-    cssmin = require('gulp-cssmin'),
-    clean = require('gulp-clean'),
-    path = require('path'),
-    tinylr = require('tiny-lr'),
-    http = require('http'),
-    ecstatic = require('ecstatic'),
-    embedlr = require("gulp-embedlr"),
-    exec = require('child_process').exec,
-    rename = require("gulp-rename"),
-    tree = require('gulp-tree'),
+var gulp         = require('gulp'),
+    gutil        = require('gulp-util'),
+    jade         = require('gulp-jade'),
+    sass         = require('gulp-sass'),
+    cssmin       = require('gulp-cssmin'),
+    clean        = require('gulp-clean'),
+    path         = require('path'),
+    tinylr       = require('tiny-lr'),
+    http         = require('http'),
+    ecstatic     = require('ecstatic'),
+    embedlr      = require("gulp-embedlr"),
+    exec         = require('child_process').exec,
+    rename       = require("gulp-rename"),
+    tree         = require('gulp-tree'),
     scriptInject = require('gulp-script-inject'),
-    prunehtml = require('gulp-prune-html'),
-    sourcemaps = require('gulp-sourcemaps')
+    prunehtml    = require('gulp-prune-html'),
+    sourcemaps   = require('gulp-sourcemaps')
 console.log()
 
 var tlr = tinylr()
@@ -34,7 +34,7 @@ gulp.task('sass', function(){
 
     gulp.src(['./src/assets/sass/**/*.scss', '!./src/**/_*'])
         .pipe(sourcemaps.init())
-          .pipe(sass())
+          .pipe(sass({includePaths:['./sass/'], errLogToConsole: true}))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./src/assets/css'));
 
