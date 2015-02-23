@@ -32,6 +32,6 @@ your pull.
 ### Create a Pull Request on Github
 
 Go to *your* GitHub repository at
-https://github.com/my-github-username/ucsf_identity_web_banner_templates,
+https://github.com/my-github-username/shoestring,
 switch branch to your topic branch and click the 'Pull Request' button.
 You can then add further comments to your pull request.
