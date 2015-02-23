@@ -5,8 +5,9 @@
 @import "../bourbon/bourbon";
 @import "modules/variables";
 @import "modules/mixins";
-$fa-font-path: "../../../bower_components/font-awesome/fonts";
 @import "./src/bower_components/font-awesome/scss/font-awesome.scss";
+$fa-font-path: "../../../bower_components/font-awesome/fonts";
+
 
 /*
 Variables

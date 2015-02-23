@@ -170,9 +170,9 @@
 @mixin rem($property, $multiplier: 1, $unit: $base-spacing-unit){
 
 	@if type-of($multiplier) != "number"{
-
+    $multiplier: 1;
 		$unit: $multiplier;
-		$multiplier: 1;
+
 	}
 
 	@include rem-full($multiplier, $property, $unit);

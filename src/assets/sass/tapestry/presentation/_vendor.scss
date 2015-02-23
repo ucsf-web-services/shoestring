@@ -1,5 +1,5 @@
 /*------------------------------------*\
-	VENDOR.CSS    
+	VENDOR.CSS
 \*------------------------------------*/
 
 
@@ -23,11 +23,11 @@
 .selecter.multiple .selecter-item.selected{
 
     position: relative;
-    
+
     &:after{
         content: "\f058";
         font-family: FontAwesome;
-        color: $color-primary;
+        color: $color-light-blue;
         position: absolute;
         right: 1em;
         font-size: 18px;
