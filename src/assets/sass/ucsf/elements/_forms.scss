@@ -141,7 +141,7 @@ textarea{
     .text-input{
         width: auto;
         padding: $input-padding;
-        @include rem(margin-right,-0.2);
+        @include rem(margin-right, -0.2);
     }
 
     /* Button */

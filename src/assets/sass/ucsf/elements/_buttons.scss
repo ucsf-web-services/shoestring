@@ -47,7 +47,7 @@ BUTTONS.CSS
 \*------------------------------------*/
 
 
-@mixin tton($background, $border, $hover:5%, $focus: 10%){
+@mixin button($background, $border, $hover:5%, $focus: 10%){
 
   &:hover, &:active, &{
     background: $background;
