@@ -16,7 +16,7 @@
 .ui-accordion{
     list-style: none;
     margin-left: 0;
-    @include rem(margin-bottom);
+    //@include rem(margin-bottom);
     -webkit-tap-highlight-color: transparent;
 }
 

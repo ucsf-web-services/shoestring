@@ -165,34 +165,37 @@
  * Converts properties to both REM and Pixel Values. Based on line-height
  * @include rem(margin-bottom, 0.5)
  * @include rem(padding, 1, 20px);
+ * $base-spacing-unit = 12px;
  */
 
 @mixin rem($property, $multiplier: 1, $unit: $base-spacing-unit){
-
 	@if type-of($multiplier) != "number"{
 
 		$unit: $multiplier;
-		$multiplier: 1;
-	}
-
-	@include rem-full($multiplier, $property, $unit);
+    $multiplier: 1;
+  }
+  @include rem-full($multiplier, $property, $unit);
 }
-
 
 /**
  * Helper function for REM
  * @include rem-full(padding, 10px 20px 10px 30px);
  */
-
+ /* base-font-size: 12px */
+ /* margin-left, .50, 1 */
 @mixin rem-full($multiplier, $property, $px-values) {
 	// Convert the baseline into rems
-	$baseline-rem: $base-font-size / 1rem * 1;
-	// Print the first line in pixel values
 
-	// If there is only one (numeric) value, return the property/value line for it.
+	$baseline-rem: $base-font-size / 1rem * 1;
+
+  //$baseline-rem = 12px / 1rem * 1 = 12px/rem
+	// Print the first line in pixel values
+  // If there is only one (numeric) value, return the property/value line for it.
 	@if type-of($px-values) == "number" {
 		#{$property}: $px-values * $multiplier;
+    /* margin-bottom: 1 * 1 */
 		#{$property}: $px-values / $baseline-rem * $multiplier;
+    /* margin-bottom: 1 / 12px/rem * 1 */
 	}
 	@else {
 		// Create an empty list that we can dump values into
@@ -200,7 +203,7 @@
 		$pixel-values: ();
 		@each $value in $px-values {
 			// If the value is zero or not a number, return it
-			@if $value == 0 or type-of( $value ) != "number" {
+			@if $value == 0 or type-of($value) != "number" {
 				$rem-values: append($rem-values, $value);
 				$pixel-values: append($pixel-values, $value);
 			}
@@ -214,7 +217,6 @@
 		#{$property}: $rem-values;
 	}
 }
-
 
 /**
  * Grids
