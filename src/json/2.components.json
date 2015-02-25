@@ -58,6 +58,17 @@
         ]
     },
     {
+        "name": "Banner",
+        "slug": "Banner",
+        "children": [
+            {
+                "path": "patterns/2.components/Banner/banner.md",
+                "name": "Banner",
+                "slug": "banner.md"
+            }
+        ]
+    },
+    {
         "name": "Date",
         "slug": "Date",
         "children": [

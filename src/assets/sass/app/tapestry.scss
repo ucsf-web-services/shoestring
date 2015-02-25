@@ -76,6 +76,7 @@ html[ng-app]{
 
     .form-control{
         position: relative;
+        color: red;
         @include rem(margin-bottom, 0.75);
 
         .text-input{

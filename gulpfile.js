@@ -34,7 +34,7 @@ gulp.task('sass', function(){
 
     gulp.src(['./src/assets/sass/**/*.scss', '!./src/**/_*'])
         .pipe(sourcemaps.init())
-          .pipe(sass())
+        .pipe(sass({includePaths: ['./assets/css'], errLogToConsole: true }))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest('./src/assets/css'));
 
