@@ -1,18 +1,21 @@
-body .top-header-region.no-logo .top-header-container ul.menu {
-  li.first{
-    background: none;
-    padding-left: 0;
-    text-indent: 0%;
-  }
-}
-
-
 :root .top-header-region .top-header-container ul.menu li.first {
   background: url("../images/ucsf-logo-banner.svg") no-repeat;
   background-size: 45px 22px;
   background-position-x: 0;
   background-position-y: 35%;
   background-position: 0 35%;
+}
+
+.top-header-region.no-logo {
+  .top-header-container {
+    ul.menu {
+      li.first{
+        background: none;
+        padding-left: 0;
+        text-indent: 0%;
+      }
+    }
+  }
 }
 
 .top-header-region {
