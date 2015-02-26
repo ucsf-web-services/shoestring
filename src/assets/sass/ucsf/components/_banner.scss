@@ -1,28 +1,3 @@
-/**
-  * Browser-hack, targets everything but IE8 and below.
-  * @link http://browserhacks.com/#hack-1aaa2cce9e371d212109d5b1b8229ef6
-  */
-
-:root .top-header-region .top-header-container ul.menu li.first {
-  background: url("../images/ucsf-logo-banner.svg") no-repeat;
-  background-size: 45px 22px;
-  background-position-x: 0;
-  background-position-y: 35%;
-  background-position: 0 35%;
-}
-
-.top-header-region.no-logo {
-  .top-header-container {
-    ul.menu {
-      li.first{
-        background: none;
-        padding-left: 0;
-        text-indent: 0%;
-      }
-    }
-  }
-}
-
 .top-header-region {
   height: 40px;
   overflow: hidden;
@@ -62,6 +37,33 @@
         a {
           color: #fff;
         }
+      }
+    }
+  }
+}
+
+/**
+  * Browser-hack, targets everything but IE8 and below.
+  * @link http://browserhacks.com/#hack-1aaa2cce9e371d212109d5b1b8229ef6
+  */
+:root {
+  .top-header-region .top-header-container ul.menu li.first {
+    background: url("../images/ucsf-logo-banner.svg") no-repeat;
+    background-size: 45px 22px;
+    background-position-x: 0;
+    background-position-y: 35%;
+    background-position: 0 35%;
+  }
+}
+
+/* Hides background logo and brings text back */
+.top-header-region.no-logo {
+  .top-header-container {
+    ul.menu {
+      li.first{
+        background: none;
+        padding-left: 0;
+        text-indent: 0%;
       }
     }
   }
