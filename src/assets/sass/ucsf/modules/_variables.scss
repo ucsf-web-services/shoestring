@@ -60,7 +60,7 @@ $COLOR SWATCHES
 $color-dark: #052049;
 $color-light-blue: #178CCB;
 //color-nice-blue is being used in the datepicker and should be replaced with color-dark
-$color-nice-blue: $color-dark; 
+$color-nice-blue: $color-dark;
 $color-blue-green: #18A3AC;
 $color-green: #90BD31;
 $color-orange: #F48024;
@@ -69,7 +69,6 @@ $color-red: #EC1848;
 $color-yellow: #FFDD00;
 $color-dark-grey: #B4B9BF;
 $color-light-grey: #D1D3D3;
-
 
 $color-warning: $color-red;
 $color-primary: $color-blue-green;
@@ -92,7 +91,10 @@ $phone-breakpoint-end        : 480px;
 $tablet-breakpoint-start     : 600px;
 $desktop-breakpoint-start    : $site-width;
 $widescreen-breakpoint-start : 1300px;
-
+$bp-desktop: 1230px;
+$bp-tablet: 830px;
+$bp-mobile: 600px;
+$line-break-color: #E0E1E5;
 
 /*------------------------------------*\
 $TYPOGRAPHY
