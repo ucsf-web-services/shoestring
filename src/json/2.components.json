@@ -58,6 +58,47 @@
         ]
     },
     {
+        "name": "Banner",
+        "slug": "Banner",
+        "children": [
+            {
+                "path": "patterns/2.components/Banner/1.banner-blue.md",
+                "name": "Banner Blue",
+                "slug": "1.banner-blue.md"
+            },
+            {
+                "path": "patterns/2.components/Banner/2.banner-light-blue.md",
+                "name": "Banner Light Blue",
+                "slug": "2.banner-light-blue.md"
+            },
+            {
+                "path": "patterns/2.components/Banner/3.banner-orange.md",
+                "name": "Banner Orange",
+                "slug": "3.banner-orange.md"
+            },
+            {
+                "path": "patterns/2.components/Banner/4.banner-green.md",
+                "name": "Banner Green",
+                "slug": "4.banner-green.md"
+            },
+            {
+                "path": "patterns/2.components/Banner/5.banner-teal.md",
+                "name": "Banner Teal",
+                "slug": "5.banner-teal.md"
+            },
+            {
+                "path": "patterns/2.components/Banner/6.banner-purple.md",
+                "name": "Banner Purple",
+                "slug": "6.banner-purple.md"
+            },
+            {
+                "path": "patterns/2.components/Banner/7.banner-red.md",
+                "name": "Banner Red",
+                "slug": "7.banner-red.md"
+            }
+        ]
+    },
+    {
         "name": "Date",
         "slug": "Date",
         "children": [
