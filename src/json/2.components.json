@@ -95,6 +95,11 @@
                 "path": "patterns/2.components/Banner/7.banner-red.md",
                 "name": "Banner Red",
                 "slug": "7.banner-red.md"
+            },
+            {
+                "path": "patterns/2.components/Banner/8.banner-no-logo.md",
+                "name": "Banner No Logo",
+                "slug": "8.banner-no-logo.md"
             }
         ]
     },
