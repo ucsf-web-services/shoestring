@@ -3,6 +3,7 @@
   background-size: 45px 22px;
   background-position-x: 0;
   background-position-y: 35%;
+  background-position: 0 35%;
 }
 
 .top-header-region {
@@ -21,6 +22,7 @@
         float: left;
         padding-left: 58px;
         background: url("../images/ucsf-logo-banner.png") no-repeat;
+        background-position: 0 35%;
         background-position-x: 0;
         background-position-y: 35%;
         @media (max-width: $bp-mobile) {
