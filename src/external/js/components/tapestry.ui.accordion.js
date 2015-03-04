@@ -14,7 +14,6 @@
 
     };
 
-
     /**
      * Constructor
      */
@@ -105,7 +104,6 @@
         $('.ui-accordion').accordion();
 
     });
-
 
 
 })(jQuery, window);

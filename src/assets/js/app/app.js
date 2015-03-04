@@ -67,14 +67,13 @@ angular.module('tapestry', [
         angular.forEach(jsonPath, function(value, key){
 
             value.slug = value.name.replace(/\s+/g, '-').toLowerCase()
-
+            
             if(value.slug == "templates"){
 
                 $routeProvider.when('/' + value.slug + '/:slug', {
                     templateUrl: 'assets/js/templates/listing-template.html',
                     controller: 'templateController'
                 })
-
             }else{
 
                 $routeProvider.when('/' + value.slug + '/:slug', {
@@ -237,14 +236,13 @@ angular.module('tapestry', [
                     }
                 })
 
-
                 /**
                  * hide Menu
                  */
 
                 setTimeout(function(){
                     angular.element('html').removeClass('menu__opened');
-                }, 2000)
+                }, 100)
 
             }
 
@@ -260,9 +258,6 @@ angular.module('tapestry', [
             $autocomplete && $autocomplete.autocomplete('fixPosition')
 
         });
-
-
-
 
 
     }])
@@ -288,7 +283,6 @@ function flattener(arrr, template, category){
             var parent = parent? parent: '',
                 root = parent.replace(/\s+/g, '-').toLowerCase(),
                 slug = arr[i].name.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/]/gi, '').replace(/\s+/g, '-').toLowerCase()
-
             a.push({
                 value: arr[i].name,
                 slug: slug,
