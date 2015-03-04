@@ -1,6 +1,7 @@
-.top-header-region {
+#ucsf-banner-nav {
   height: 40px;
   overflow: hidden;
+  background-color: $color-nice-blue;
   .top-header-container {
     margin-right: auto;
     margin-left: auto;
@@ -47,7 +48,7 @@
   * @link http://browserhacks.com/#hack-1aaa2cce9e371d212109d5b1b8229ef6
   */
 :root {
-  .top-header-region .top-header-container ul.menu li.first {
+  #ucsf-banner-nav .top-header-container ul.menu li.first {
     background: url("../images/ucsf-logo-banner.svg") no-repeat;
     background-size: 45px 22px;
     background-position-x: 0;
@@ -57,7 +58,7 @@
 }
 
 /* Hides background logo and brings text back */
-.top-header-region.no-logo {
+#ucsf-banner-nav.no-logo {
   .top-header-container {
     ul.menu {
       li.first{
@@ -70,30 +71,30 @@
 }
 
 /* Color classes for top header region */
-.top-header-blue {
+#ucsf-banner-nav {
   background-color: $color-nice-blue;
 }
 
-.top-header-light-blue {
+#ucsf-banner-nav.light-blue {
   background-color: $color-light-blue;
 }
 
-.top-header-orange {
+#ucsf-banner-nav.orange {
   background-color: $color-orange;
 }
 
-.top-header-green {
+#ucsf-banner-nav.green {
   background-color: $color-green;
 }
 
-.top-header-teal {
+#ucsf-banner-nav.teal {
   background-color: $color-blue-green;
 }
 
-.top-header-purple {
+#ucsf-banner-nav.purple {
   background-color: $color-purple;
 }
 
-.top-header-red {
+#ucsf-banner-nav.red {
   background-color: $color-red;
 }
