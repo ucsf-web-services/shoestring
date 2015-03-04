@@ -3,11 +3,9 @@
  */
 
 angular.module('tapestry.controllers', [])
-
     .controller('headerController', ['$scope', 'isMobile', '$rootScope', '$filter', function($scope, isMobile, $rootScope, $filter){
 
         var $html = angular.element('html')
-        
         /**
          * Main Section
          */                
@@ -79,7 +77,7 @@ angular.module('tapestry.controllers', [])
          * Disqus Enabled
          * @type {[boolean]}
          */
-        
+
         $scope.disqus_enabled = disqus_shortname? false: true;
         
         var section = $location.$$path.split('/')[1],
@@ -301,7 +299,7 @@ angular.module('tapestry.controllers', [])
 
         });
 
-        //console.log($scope.templates)
+        console.log($scope.templates)
         
     }])
 ;

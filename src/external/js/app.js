@@ -5,8 +5,7 @@
     /** Tapestry Completed */
 
     $('body').bind('tapestry.completed', function(){
-
-        APP.init()
+        APP.init();
     });
 
 
@@ -16,7 +15,6 @@
 
     
     var APP = {
-        
         init: function(){
 
 
@@ -128,16 +126,38 @@
             })
 
             $('.ui-accordion').accordion();
-
             $('.ui-tabs, [data-component="ui-tabs"]').tabs();
 
             $('[data-toggle]').dropdown();
 
             //$('.tapestry-menu-side').scrollspy();
-            
-            var $menu = $('.tapestry-menu-side a')
+            var $menu = $('.tapestry-menu-side a');
+            console.log('hi');
+        
+            if ( $("#ucsf-menu").length) {
+
+                var nav = responsiveNav("#ucsf-menu", {
+                    animate: false,
+                    label: "",
+                    insert: "before",
+                    closeOnNavClick: true,
+                    openPos: "relative",
+                });
+
+               //$(".nav-toggle").addClass("fa fa-navicon");
+            }
+
+            /*$(function() {
+                $('#ucsf-menu li a').click(function(e) {
+                    e.preventDefault();
+                    var $this = $(this);
+                    $this.closest('ul').find('.active').removeClass('active');
+                    $this.parent().addClass('active');
+
+                });
+            });
+            */
         }
     }
-
     
 })(jQuery, window)
