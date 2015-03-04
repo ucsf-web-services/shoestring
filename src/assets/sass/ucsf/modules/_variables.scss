@@ -72,7 +72,11 @@ $color-light-grey: #D1D3D3;
 
 $color-warning: $color-red;
 $color-primary: $color-blue-green;
-
+$grey: #b4b9bf;
+$light-grey: lighten($grey, 14%);
+$lighter-grey: lighten($grey, 20%);
+$lightest-grey: lighten($grey, 21.5%);
+$dark-grey: darken($grey, 35%);
 
 /*------------------------------------*\
 $GRID SETTINGS
@@ -142,8 +146,8 @@ $micro-size : 12px;
 $LINKS
 \*------------------------------------*/
 
-$link-color              : $color-primary;
-$link-hover-color        : $color-primary;
+$link-color              : $color-light-blue;
+$link-hover-color        : $color-light-blue;
 $link-visited-color      : $link-color;
 $link-underline          : false;
 $link-underline-on-hover : true;
@@ -155,7 +159,7 @@ $FORMS
 
 $input-border-color  : $base-ui-color;
 $input-background    : #FAFAFA;
-$input-padding       : 0.5em 1em;
+$input-padding       : 0.3em 1em;
 $input-padding-medium       : 0.8em 1em;
 $input-padding-large       : 1em 1em;
 $input-border-radius : $base-radius;

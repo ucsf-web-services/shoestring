@@ -6,7 +6,8 @@
     "jquery": "~1.9.1",
     "font-awesome": "latest",
     "tipsy": "~0.1.7",
-    "Selecter": "~3.0.12"
+    "Selecter": "~3.0.12",
+    "responsive-nav": "1.0.34"
   },
   "devDependencies": {
     "jQuery-Autocomplete": "https://github.com/devbridge/jQuery-Autocomplete.git#1.2.7",

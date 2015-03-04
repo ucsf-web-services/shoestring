@@ -197,6 +197,11 @@
         "slug": "Navigation",
         "children": [
             {
+                "path": "patterns/2.components/Navigation/1.navbar-light.md",
+                "name": "Header With Menu",
+                "slug": "1.navbar-light.md"
+            },
+            {
                 "name": "Pagination",
                 "slug": "Pagination",
                 "children": [
@@ -221,11 +226,6 @@
                 "path": "patterns/2.components/Navigation/navbar-dark.md",
                 "name": "Navigation dark",
                 "slug": "navbar-dark.md"
-            },
-            {
-                "path": "patterns/2.components/Navigation/navbar-light.md",
-                "name": "Navigation light",
-                "slug": "navbar-light.md"
             }
         ]
     },
