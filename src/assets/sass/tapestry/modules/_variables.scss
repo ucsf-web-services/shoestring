@@ -1,27 +1,27 @@
 /*------------------------------------*\
-    $DEBUG
+$DEBUG
 \*------------------------------------*/
 /**
- * Debug mode will visually highlight any potential markup/accessibility quirks
- * in the browser. Set to `true` or `false`.
- */
+* Debug mode will visually highlight any potential markup/accessibility quirks
+* in the browser. Set to `true` or `false`.
+*/
 
 $debug-mode : false;
 
 
 /*------------------------------------*\
-    $OBJECTS AND ABSTRACTIONS FROM INUIT CSS
+$OBJECTS AND ABSTRACTIONS FROM INUIT CSS
 \*------------------------------------*/
 /**
- * Which objects and abstractions would you like to use?
- */
+* Which objects and abstractions would you like to use?
+*/
 
 $use-beautons     : true;
 $use-rules: true;
 
 
 /*------------------------------------*\
-    $BASE
+$BASE
 \*------------------------------------*/
 
 $base-color       : #444;
@@ -30,19 +30,19 @@ $base-font-size   : 14px;
 $base-line-height : 24px;
 $base-spacing-unit: $base-line-height;
 $base-ui-color    : #BFBFBF;
-$base-radius: 2px;
+$base-radius: 5px;
 $base-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 
 
 /*------------------------------------*\
-    $UI ELEMENTS
+$UI ELEMENTS
 \*------------------------------------*/
 
 $ui-radius: 2px;
 
 
 /*------------------------------------*\
-    $TEXT DIRECTION
+$TEXT DIRECTION
 \*------------------------------------*/
 
 $dir-default : "left";
@@ -50,30 +50,36 @@ $dir-reverse : "right";
 $direction   : "LTR";
 
 @if $direction == "RTL" {
-    $dir-default : "right";
-    $dir-reverse : "left";
+  $dir-default : "right";
+  $dir-reverse : "left";
 }
 
 /*------------------------------------*\
-    $COLOR SWATCHES
+$COLOR SWATCHES
 \*------------------------------------*/
-
-$color-warning: #E74C3C;
-$color-primary: #18A3AC;
-
-
 $color-dark: #052049;
-$color-light-blue: #272F4D;
+$color-light-blue: #178CCB;
+//color-nice-blue is being used in the datepicker and should be replaced with color-dark
+$color-nice-blue: $color-dark;
+$color-blue-green: #18A3AC;
+$color-green: #90BD31;
+$color-orange: #F48024;
+$color-purple: #716FB2;
+$color-red: #EC1848;
+$color-yellow: #FFDD00;
+$color-dark-grey: #B4B9BF;
+$color-light-grey: #D1D3D3;
 
-$color-nice-blue: #394264;
-
-$color-light-grey: #EDEEF1;
-
-$color-dark-grey: #BDC3C7;
-
+$color-warning: $color-red;
+$color-primary: $color-blue-green;
+$grey: #b4b9bf;
+$light-grey: lighten($grey, 14%);
+$lighter-grey: lighten($grey, 20%);
+$lightest-grey: lighten($grey, 21.5%);
+$dark-grey: darken($grey, 35%);
 
 /*------------------------------------*\
-    $GRID SETTINGS
+$GRID SETTINGS
 \*------------------------------------*/
 
 $grid-columns : 12;
@@ -82,50 +88,53 @@ $site-width   : 960px;
 
 
 /*------------------------------------*\
-    $BREAKPOINTS
+$BREAKPOINTS
 \*------------------------------------*/
 
 $phone-breakpoint-end        : 480px;
 $tablet-breakpoint-start     : 600px;
 $desktop-breakpoint-start    : $site-width;
 $widescreen-breakpoint-start : 1300px;
-
+$bp-desktop: 1230px;
+$bp-tablet: 830px;
+$bp-mobile: 600px;
+$line-break-color: #E0E1E5;
 
 /*------------------------------------*\
-    $TYPOGRAPHY
+$TYPOGRAPHY
 \*------------------------------------*/
 
 
 $heading-font-family: $base-font-family;
 
-    /**
-     * Mobile Sizes
-     */
+/**
+* Mobile Sizes
+*/
 
-    $h1-size: 30px; //.alpha
-    $h2-size: 24px; //.beta
-    $h3-size: 20px; //.gamma
-    $h4-size: 18px; //.delta
-    $h5-size: 16px; //.epsilon
-    $h6-size: 14px; //.zeta
-
-
-    /**
-     * Desktop font size
-     * Both tablets and desktops
-     */
-
-    $h1-size-desktop: 48px;
-    $h2-size-desktop: 36px;
-    $h3-size-desktop: 24px;
-    $h4-size-desktop: 20px;
-    $h5-size-desktop: 18px;
-    $h6-size-desktop: 16px;
+$h1-size: 30px; //.alpha
+$h2-size: 24px; //.beta
+$h3-size: 20px; //.gamma
+$h4-size: 18px; //.delta
+$h5-size: 16px; //.epsilon
+$h6-size: 14px; //.zeta
 
 
 /**
- * Optional font sizes
- */
+* Desktop font size
+* Both tablets and desktops
+*/
+
+$h1-size-desktop: 48px;
+$h2-size-desktop: 36px;
+$h3-size-desktop: 24px;
+$h4-size-desktop: 20px;
+$h5-size-desktop: 18px;
+$h6-size-desktop: 16px;
+
+
+/**
+* Optional font sizes
+*/
 
 $giga-size  : 96px;
 $mega-size  : 72px;
@@ -134,99 +143,99 @@ $milli-size : 13px;
 $micro-size : 12px;
 
 /*------------------------------------*\
-    $LINKS
+$LINKS
 \*------------------------------------*/
 
 $link-color              : $color-light-blue;
-$link-hover-color        : $color-primary;
+$link-hover-color        : $color-light-blue;
 $link-visited-color      : $link-color;
 $link-underline          : false;
 $link-underline-on-hover : true;
 
 
 /*------------------------------------*\
-    $FORMS
+$FORMS
 \*------------------------------------*/
 
 $input-border-color  : $base-ui-color;
 $input-background    : #FAFAFA;
-$input-padding       : 0.6em 1em;
+$input-padding       : 0.3em 1em;
 $input-padding-medium       : 0.8em 1em;
 $input-padding-large       : 1em 1em;
 $input-border-radius : $base-radius;
 
 /*------------------------------------*\
-    $BUTTONS
+$BUTTONS
 \*------------------------------------*/
 
 $button-padding            : 0.6em 1.2em;
 $button-padding-desktop    : 0.6em 1.2em;
 $button-border-radius      : $base-radius;
 
-    /**
-     * Button default
-     */
+/**
+* Button default
+*/
 
-    $button-default-background : #EDEEF1;
-    $button-default-color: #888;
+$button-default-background : $color-light-grey;
+$button-default-color: $base-color;
 
-    /**
-     * Button Primary
-     */
+/**
+* Button Primary
+*/
 
-    $button-primary-background      : $color-primary;
-    $button-primary-border: $color-primary;
+$button-primary-background: $color-primary;
+$button-primary-border: $color-primary;
 
-    /**
-     * Button Secondary
-     */
+/**
+* Button Secondary
+*/
 
-    $button-secondary-background: #9DA6AF;
-    $button-secondary-border: #9DA6AF;
+$button-secondary-background: $color-light-grey;
+$button-secondary-border: $color-light-grey;
 
-    /**
-     * Button Light
-     */
+/**
+* Button Light
+*/
 
-    $button-light-background: #fff;
-    $button-light-color: lighten($base-color, 10%);
-    $button-light-border: darken($base-ui-color,10%);
+$button-light-background: #fff;
+$button-light-color: lighten($base-color, 10%);
+$button-light-border: darken($base-ui-color,10%);
 
-    /**
-     * Button Dark
-     */
+/**
+* Button Dark
+*/
 
-    $button-dark-background: #323A45;
-    $button-dark-border: #323A45;
+$button-dark-background: $color-dark;
+$button-dark-border: $color-dark;
 
-    /**
-    * Button Transparent
-    */
+/**
+* Button Transparent
+*/
 
-    $button-transparent-background: transparent;
-    $button-transparent-border: #fff;
+$button-transparent-background: transparent;
+$button-transparent-border: #fff;
 
-    /**
-     * Button Warning
-     */
+/**
+* Button Warning
+*/
 
-    $button-warning-background: $color-warning;
-    $button-warning-border: $color-warning;
+$button-warning-background: $color-warning;
+$button-warning-border: $color-warning;
 
 
-    /**
-     * Button facebook
-     */
+/**
+* Button facebook
+*/
 
-    $button-facebook-background: #5970B3;
-    $button-facebook-border: #5970B3;
+$button-facebook-background: #5970B3;
+$button-facebook-border: #5970B3;
 
-    /**
-     * Button google
-     */
+/**
+* Button google
+*/
 
-    $button-google-background: #EF2213;
-    $button-google-border: #EF2213;
+$button-google-background: #EF2213;
+$button-google-border: #EF2213;
 
 
 

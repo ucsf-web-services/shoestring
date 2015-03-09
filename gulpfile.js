@@ -33,11 +33,10 @@ var livereload = function (evt, filepath) {
 gulp.task('sass', function(){
 
     gulp.src(['./src/assets/sass/**/*.scss', '!./src/**/_*'])
-        .pipe(sourcemaps.init())
-        .pipe(sass({includePaths: ['./assets/css'], errLogToConsole: true }))
-        .pipe(sourcemaps.write())
-        .pipe(gulp.dest('./src/assets/css'));
-
+        .pipe(sass({ 
+            sourcemap: true
+        }))
+        .pipe(gulp.dest('./src/assets/css'))
 })
 
 

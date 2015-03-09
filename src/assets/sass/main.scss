@@ -34,7 +34,8 @@
  * Import Variables
  */
 
-@import "ucsf/modules/variables";
+@import "tapestry/modules/variables";
+//@import "ucsf/modules/variables";
 
 /**
  * Import Inuit
@@ -46,9 +47,5 @@
 /**
  * She's all yours, cap'n... Begin importing your stuff here.
  */
-
 @import "tapestry/tapestry";
-
-
-
 @import "ucsf/ucsf";
