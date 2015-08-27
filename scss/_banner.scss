@@ -1,0 +1,108 @@
+/* Top Banner Styles */
+
+
+#ucsf-banner-nav {
+  height: 40px;
+  overflow: hidden;
+  background-color: $oxford-blue;
+  .top-header-container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 1170px;
+    ul.menu {
+      padding: 0;
+      margin: 0;
+      li.first {
+        display: inline-block;
+        float: left;
+        padding-left: 58px;
+        background: url("../img/ucsf-logo-banner.png") no-repeat;
+        background-position: 0 35%;
+        background-position-x: 0;
+        background-position-y: 35%;
+        @media (max-width: $bp-mobile) {
+          text-indent: 100%;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+      li {
+        @media (max-width: $bp-tablet) {
+          display: none;
+        }
+        display: inline-block;
+        float: right;
+        font-size: 14px;
+        padding: 12px 10px 12px;
+        @media (max-width: $bp-mobile) {
+          display: none;
+        }
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}
+
+/**
+  * Browser-hack, targets everything but IE8 and below.
+  * @link http://browserhacks.com/#hack-1aaa2cce9e371d212109d5b1b8229ef6
+  */
+
+:root {
+  #ucsf-banner-nav .top-header-container ul.menu li.first {
+    background: url("../img/ucsf-logo-banner.svg") no-repeat;
+    background-size: 45px 22px;
+    background-position-x: 0;
+    background-position-y: 35%;
+    background-position: 0 35%;
+  }
+}
+
+/* Hides background logo and brings text back */
+
+#ucsf-banner-nav.no-logo {
+  .top-header-container {
+    ul.menu {
+      li.first{
+        background: none;
+        padding-left: 0;
+        text-indent: 0%;
+      }
+    }
+  }
+}
+
+/* Color classes for top header region */
+
+#ucsf-banner-nav {
+  background-color: $oxford-blue
+}
+
+#ucsf-banner-nav.light-blue {
+  background-color: $electric-blue
+}
+
+#ucsf-banner-nav.orange {
+  background-color: $cadmium-orange;
+}
+
+#ucsf-banner-nav.green {
+  background-color: $green;
+}
+
+#ucsf-banner-nav.teal {
+  background-color: $blue-green;
+}
+
+#ucsf-banner-nav.purple {
+  background-color: $purple;
+}
+
+#ucsf-banner-nav.red {
+  background-color: $red;
+}

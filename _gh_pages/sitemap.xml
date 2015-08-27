@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>localhost:3000/</loc>
+    <lastmod>2015-08-27T15:40:56-07:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  
+  
+  <url>
+    <loc>localhost:3000/404/</loc>
+    <lastmod>2015-08-27T15:40:56-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>localhost:3000/about/</loc>
+    <lastmod>2015-08-27T15:40:56-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>localhost:3000/components/</loc>
+    <lastmod>2015-08-27T15:40:56-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  <url>
+    <loc>localhost:3000/css/</loc>
+    <lastmod>2015-08-27T15:40:56-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+  
+  
+  
+  <url>
+    <loc>localhost:3000/javascript/</loc>
+    <lastmod>2015-08-27T15:40:56-07:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  
+</urlset>
