@@ -17,6 +17,10 @@
   }
 }
 
+.navbar {
+  height: 50px;
+}
+
 .icon-bar {
   display: block;
   width: 25px;
@@ -31,7 +35,6 @@
 
 .navbar-header {
   float: left;
-  margin-top: 4px;
   font-size: 30px;
   a {
     text-decoration: none;
