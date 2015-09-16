@@ -491,7 +491,18 @@ $BUTTONS
   cursor: pointer;
   background-image: none;
   border: 1px solid transparent;
-  white-space: nowrap; }
+  white-space: nowrap;
+  text-decoration: none;
+  border-radius: 4px;
+  background-clip: padding-box;
+  /* stops bg color from leaking outside the border: */
+  padding-right: 1em;
+  padding-left: 1em;
+  font-family: inherit; }
+  .btn:hover {
+    text-decoration: none; }
+  .btn:active, .btn:focus {
+    outline: none; }
 
 /* Button Sizes */
 .btn-xs {
@@ -499,8 +510,37 @@ $BUTTONS
   font-size: 10px;
   line-height: 1.5; }
 
+.btn-small {
+  padding-right: 0.5em;
+  padding-left: 0.5em;
+  font-size: 12px;
+  line-height: 24px; }
+
+.btn-default {
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  font-size: 14px;
+  line-height: 32px; }
+
+.btn-lg {
+  padding-right: 2em;
+  padding-left: 2em;
+  font-size: 16px;
+  line-height: 38px; }
+
+.btn-full {
+  width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  text-align: center; }
+
 /* Button States */
 /* UCSF Button Styles */
+.btn-transparent {
+  background: transparent;
+  border-color: #fff;
+  color: #fff; }
+
 /*------------------------------------*\
     GRID.CSS
 \*------------------------------------*/
@@ -543,7 +583,7 @@ $BUTTONS
 
 .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12 {
   float: left;
-  margin: 0 3% 0 0; }
+  padding: 0 3% 0 0; }
 
 .row:after {
   content: "";
@@ -851,7 +891,7 @@ fieldset {
   cursor: pointer; }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p, li, a {
-  font-family: "HelveticaNeueLTStd-Roman", Helvetica, Aria; }
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
   h1 small, h1 .small, h2 small, h2 .small, h3 small, h3 .small, h4 small, h4 .small, h5 small, h5 .small, h6 small, h6 .small, .h1 small, .h1 .small, .h2 small, .h2 .small, .h3 small, .h3 .small, .h4 small, .h4 .small, .h5 small, .h5 .small, .h6 small, .h6 .small, p small, p .small, li small, li .small, a small, a .small {
     font-weight: normal;
     line-height: 1; }
