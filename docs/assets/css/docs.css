@@ -23,6 +23,9 @@ html {
   padding: 30px;
 }
 
+.masthead .btn {
+  font-size: 18px;
+}
 /* Main Navigation */
 
 .ss-docs-nav {
@@ -52,13 +55,13 @@ html {
 }
 
 .highlight pre {
-    padding: 15px;
-    margin-top: 0;
-    margin-bottom: 0;
-    word-break: normal;
-    white-space: nowrap;
-    background-color: transparent;
-    border: 0;
+  padding: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  word-break: normal;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
 }
 
 .highlight pre code {
@@ -100,4 +103,8 @@ Colors
   background-color: #052049;
   color: white;
   padding: 40px;
+}
+
+.logo-header {
+  width: 150px;
 }

@@ -10,6 +10,17 @@
 	background-image: none;
 	border: 1px solid transparent;
 	white-space: nowrap;
+	text-decoration: none;
+	@include border-radius(4px);
+	padding-right: 1em;
+	padding-left: 1em;
+	font-family: inherit;
+	&:hover {
+		text-decoration: none;
+	}
+	&:active, &:focus {
+		outline: none;
+	}
 }
 
 /* Button Sizes */
@@ -21,15 +32,33 @@
 }
 
 .btn-small {
-
+	padding-right: 0.5em;
+	padding-left: 0.5em;
+	font-size: 12px;
+	line-height: 24px;
 }
 
 .btn-default {
-
+	padding-right: 1.5em;
+	padding-left: 1.5em;
+	font-size: 14px;
+	line-height: 32px;
 }
 
 .btn-lg {
+  padding-right: 2em;
+  padding-left: 2em;
+  font-size: 16px;
+  line-height: 38px;
+}
 
+
+
+.btn-full{ // For buttons that span entire width
+	width: 100%;
+	padding-right: 0;
+	padding-left: 0;
+	text-align: center;
 }
 
 /* Button States */
@@ -38,3 +67,8 @@
 
 /* UCSF Button Styles */
 
+.btn-transparent {
+	background: transparent;
+	border-color: #fff;
+	color: #fff;
+}
