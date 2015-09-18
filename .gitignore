@@ -1,8 +1,9 @@
 # .gitignore for jekyllized projects
-
+_gh_pages
 # Ignore hidden folders
 # This takes care of .tmp, .sass-cache, and many others
 .*/
+
 
 # OSX
 ._*
