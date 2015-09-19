@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
  <title>Shoestring</title>
- <link href="localhost:3000/atom.xml" rel="self"/>
- <link href="localhost:3000/"/>
- <updated>2015-09-18T17:28:46-07:00</updated>
- <id>localhost:3000</id>
+ <link href="https://github.com/ucsf-web-services/shoestring/atom.xml" rel="self"/>
+ <link href="https://github.com/ucsf-web-services/shoestring/"/>
+ <updated>2015-09-18T17:32:17-07:00</updated>
+ <id>https://github.com/ucsf-web-services/shoestring</id>
  <author>
    <name></name>
    <email></email>
