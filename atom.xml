@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+ <title>Shoestring</title>
+ <link href="https://github.com/ucsf-web-services/shoestring/atom.xml" rel="self"/>
+ <link href="https://github.com/ucsf-web-services/shoestring/"/>
+ <updated>2015-09-22T11:44:15-07:00</updated>
+ <id>https://github.com/ucsf-web-services/shoestring</id>
+ <author>
+   <name></name>
+   <email></email>
+ </author>
+
+ 
+
+</feed>
