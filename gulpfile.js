@@ -10,7 +10,6 @@ var gulp        = require("gulp"),
     pkg         = require('./package.json'),
     bs;
 
-console.log('<%= pkg.name %>');
 // Deletes the directory that is used to serve the site during development
 gulp.task("clean:dev", del.bind(null, ["serve"]));
   
@@ -126,6 +125,7 @@ gulp.task("html", ["styles"], function () {
 // Task to upload your site to your personal GH Pages repo
 gulp.task("deploy", function () {
   // Deploys your optimized site, you can change the settings in the html task if you want to
+  
   return gulp.src("./_gh_pages/**/*")
     .pipe($.ghPages({
       // Currently only personal GitHub Pages are supported so it will upload to the master
@@ -154,10 +154,11 @@ gulp.task("serve:dev", ["styles", "jekyll:dev"], function () {
     notify: true,
     // tunnel: "",
     server: {
-      baseDir: "_gh_pages"
+      baseDir: "docs"
     }
   });
 });
+
   
 // These tasks will look for files that change while serving and will auto-regenerate or
 // reload the website accordingly. Update or add other files you need to be watched.
@@ -181,13 +182,15 @@ gulp.task("serve:prod", function () {
   
 // Default task, run when just writing "gulp" in the terminal
 gulp.task("default", ["serve:dev", "watch"]);
+
   // Checks your CSS, JS and Jekyll for errors
-gulp.task("check", ["jslint", "doctor"], function () {
-});
+gulp.task("check", ["jslint", "doctor"], function () {});
+
   // Builds the site but doesn"t serve it to you
 gulp.task("build", ["jekyll:prod", "styles"], function () {});
+
   // Builds your site with the "build" command and then runs all the optimizations on
-// it and outputs it to "./_gh_pages"
-gulp.task("publish", ["build"], function () {
+  // it and outputs it to "./_gh_pages"
+gulp.task("publish", ["build", "deploy"], function () {
   gulp.start("html", "copy", "images", "fonts");
 });
