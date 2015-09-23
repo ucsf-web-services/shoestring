@@ -123,16 +123,19 @@ gulp.task("html", ["styles"], function () {
   
   
 // Task to upload your site to your personal GH Pages repo
-gulp.task("deploy", function () {
-  // Deploys your optimized site, you can change the settings in the html task if you want to
+gulp.task("deploy", $.shell.task("git subtree push --prefix _gh_pages ucsf-web-services gh-pages"));
+
+
+//   function () {
+//   // Deploys your optimized site, you can change the settings in the html task if you want to
   
-  return gulp.src("./_gh_pages/**/*")
-    .pipe($.ghPages({
-      // Currently only personal GitHub Pages are supported so it will upload to the master
-      // branch and automatically overwrite anything that is in the directory
-      branch: "gh-pages"
-      }));
-});
+//   return gulp.src("./_gh_pages/**/*")
+//     .pipe($.ghPages({
+//       // Currently only personal GitHub Pages are supported so it will upload to the master
+//       // branch and automatically overwrite anything that is in the directory
+//       branch: "gh-pages"
+//       }));
+// });
   
 // Run JS Lint against your JS
 gulp.task("jslint", function () {
@@ -154,7 +157,7 @@ gulp.task("serve:dev", ["styles", "jekyll:dev"], function () {
     notify: true,
     // tunnel: "",
     server: {
-      baseDir: "docs"
+      baseDir: "_gh_pages"
     }
   });
 });
