@@ -1,0 +1,157 @@
+/*------------------------------------*\
+BASE
+\*------------------------------------*/
+
+$base-color       : #444;
+$base-font-family : 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$base-font-size   : 14px;
+$base-line-height : 24px;
+$base-spacing-unit: $base-line-height;
+$base-ui-color    : #BFBFBF;
+$base-radius: 5px;
+$base-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+
+/*------------------------------------*\
+UI ELEMENTS
+\*------------------------------------*/
+
+$ui-radius: 2px;
+
+// UCSF Provided Color Palette
+
+$oxford-blue: #052049;
+$blue-green: #18A3AC;
+$green: #90BD31;
+$cadmium-orange: #F48024;
+$purple: #716FB2;
+$red: #EC1848;
+$yellow: #FFDD00;
+$electric-blue: #007CBE;
+
+$gray-pillar: #4d4d4d;
+$gray--dark: #4d4d4d;
+$gray-darker: #58595b;
+$gray--darker: #58595b;
+$gray: #ececec;
+$gray--light: #989898;
+
+$gray--lighter: #f1f1f1;
+$gray--lightest: #F6F6F6;
+
+$gray--borders: #b4b9bf;
+$gray--dotted-borders: #b4b9bf;
+$gray--secondary-nav: #b4b9bf;
+$gray--footer-links: #b4b9bf;
+$gray--icons: #808285;
+
+/*------------------------------------*\
+$GRID SETTINGS
+\*------------------------------------*/
+
+$grid-columns : 12;
+$grid-spacing : 30px;
+$site-width   : 960px;
+
+// sign posts
+$width-xsmall  : 320px;
+$width-small   : 480px;
+$width-medium  : 768px;
+$width-large   : 1024px;
+$width-xlarge  : 1200px;
+
+// design max-width
+$width-xxlarge : 1190px; // 1170 size visually without padding
+
+// Breakpoint variables are prefixed with "$bp--"
+// Mobile-first queries
+$bp--xsmall-up  : $width-xsmall;
+$bp--small-up   : $width-small;
+$bp--medium-up  : $width-medium;
+$bp--large-up   : $width-large;
+$bp--xlarge-up  : $width-xlarge;
+$bp--xxlarge-up : $width-xxlarge;
+
+/*------------------------------------*\
+$BREAKPOINTS
+\*------------------------------------*/
+
+$phone-breakpoint-end        : 480px;
+$tablet-breakpoint-start     : 600px;
+$desktop-breakpoint-start    : $site-width;
+$widescreen-breakpoint-start : 1300px;
+$bp-desktop: 1230px;
+$bp-tablet: 830px;
+$bp-mobile: 600px;
+$line-break-color: #E0E1E5;
+
+/*------------------------------------*\
+$TYPOGRAPHY
+\*------------------------------------*/
+
+
+$heading-font-family: $base-font-family;
+
+/**
+* Mobile Sizes
+*/
+
+$h1-size: 30px; //.alpha
+$h2-size: 24px; //.beta
+$h3-size: 20px; //.gamma
+$h4-size: 18px; //.delta
+$h5-size: 16px; //.epsilon
+$h6-size: 14px; //.zeta
+
+
+/**
+* Desktop font size
+* Both tablets and desktops
+*/
+
+$h1-size-desktop: 48px;
+$h2-size-desktop: 36px;
+$h3-size-desktop: 24px;
+$h4-size-desktop: 20px;
+$h5-size-desktop: 18px;
+$h6-size-desktop: 16px;
+
+
+/**
+* Optional font sizes
+*/
+
+$giga-size  : 96px;
+$mega-size  : 72px;
+$kilo-size  : 48px;
+$milli-size : 13px;
+$micro-size : 12px;
+
+/*------------------------------------*\
+$LINKS
+\*------------------------------------*/
+
+$link-color              : $electric-blue;
+$link-hover-color        : $electric-blue;
+$link-visited-color      : $link-color;
+$link-underline          : false;
+$link-underline-on-hover : true;
+
+
+/*------------------------------------*\
+$FORMS
+\*------------------------------------*/
+
+$input-border-color  : $base-ui-color;
+$input-background    : #FAFAFA;
+$input-padding       : 0.3em 1em;
+$input-padding-medium       : 0.8em 1em;
+$input-padding-large       : 1em 1em;
+$input-border-radius : $base-radius;
+
+/*------------------------------------*\
+$BUTTONS
+\*------------------------------------*/
+
+$button-padding            : 0.6em 1.2em;
+$button-padding-desktop    : 0.6em 1.2em;
+$button-border-radius      : $base-radius;

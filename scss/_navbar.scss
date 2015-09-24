@@ -1,0 +1,75 @@
+.navbar-toggle {
+  position: relative;
+  float: right;
+  // margin-right: @navbar-padding-horizontal;
+  background-color: transparent;
+  padding: 9px 10px;
+  border: 1px solid transparent;
+  @include border-radius(4px);
+  .icon-bar + .icon-bar {
+    margin-top: 4px;
+  }
+  &:active, &:hover, &:visited, &:focus {
+    background-color: $gray--lightest;
+    color: $gray--lightest;
+    border:1px solid transparent;
+    outline: none;
+  }
+}
+
+.navbar {
+  height: 50px;
+}
+
+.icon-bar {
+  display: block;
+  width: 25px;
+  height: 4px;
+  border-radius: 1px;
+  background-color: $gray--darker;
+}
+
+.icon-bar + .icon-bar {
+    margin-top: 4px;
+}
+
+.navbar-header {
+  float: left;
+  font-size: 30px;
+  a {
+    text-decoration: none;
+    color: #000;
+    &:hover {
+      color: $electric-blue;
+    }
+  }
+}
+
+#ss-navbar {
+  overflow:hidden;
+  ul {
+    overflow: hidden;
+    float: right;
+    clear:both;
+    li {
+      float: left;
+      margin-left: 30px;
+      list-style-type: none;
+      font-size: 15px;
+      letter-spacing: .02em;
+      a {
+        text-decoration: none;
+        color: #000;
+        &:hover {
+          color: $electric-blue;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .navbar-toggle {
+      display: none;
+  }
+}

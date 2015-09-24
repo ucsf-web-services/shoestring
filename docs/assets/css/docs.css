@@ -1,0 +1,110 @@
+/* 
+The css for documentation
+*/
+
+html {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.container {
+	max-width: 1170px;
+	margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.masthead {
+  background-color: #052049;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  padding: 30px;
+}
+
+.masthead .btn {
+  font-size: 18px;
+}
+/* Main Navigation */
+
+.ss-docs-nav {
+
+}
+
+.block--preview {
+	padding: 15px;
+	padding-bottom: 40px;
+}
+
+ html
+{
+  overflow:scroll;	
+}
+
+.ss-example {
+  border: 2px solid #EDEDEE;
+  padding: 20px;
+}
+
+.highlight{
+  padding: 10px;
+  background-color: #F6F6F6;
+  word-break: normal;
+  border: 1px solid #e1e1e8;
+}
+
+.highlight pre {
+  padding: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  word-break: normal;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+
+.highlight pre code {
+  white-space: pre-wrap;
+}
+
+/*
+
+Colors 
+
+*/
+
+.palette .color {
+  width: 200px;
+  height: 120px;
+  margin-right: 30px;
+  padding-top: 50px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.palette li {
+  display: inline-block;
+}
+
+.palette .color span {
+  color: white;
+  text-align: center;
+  display: block;
+}
+
+.sub-intro {
+  font-size: 20px;
+  text-align: center;
+  padding: 30px;
+}
+
+.ss-docs-header {
+  background-color: #052049;
+  color: white;
+  padding: 40px;
+}
+
+.logo-header {
+  width: 150px;
+}

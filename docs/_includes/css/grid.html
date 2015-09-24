@@ -1,0 +1,103 @@
+<h1>Grid System</h1>
+
+<p>Shoestring has a 12 column responsive mobile first grid system built right in!</p>
+
+<p>With a grid system you can easily create page layouts that are responsive/mobile friendly</p>
+
+<h2>Information</h2>
+
+<ul>
+  <li>All columns must be placed inside a <code>.row</code> div container for the grid to work.</li>
+  <li>Adding <code>col1</code>, <code>columns-2</code>, etc.. to your class name will make that column span how many columns.</li>
+  <li>The columns must equal twelve to fit correctly inside the row.</li>
+  <li></li>
+  <li></li>
+</ul>
+
+<div class="block--preview">
+  <div class="ui-panel">
+    <div class="panel-title">
+      <h2>Example</h2>
+    </div>
+    <div class="panel-body">
+      <div class="row row--demo">
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+      </div>
+      <div class="row">
+        <div class="col12">Twelve columns</div>
+      </div>
+      <div class="row">
+        <div class="col8">Eight columns</div>
+        <div class="col4">Four columns</div>
+      </div>
+      <div class="row">
+        <div class="col4">Four columns</div>
+        <div class="col4">Four columns</div>
+        <div class="col4">Four columns</div>
+      </div>
+      <div class="row">
+        <div class="col3">Three columns</div>
+        <div class="col3">Three columns</div>
+        <div class="col3">Three columns</div>
+        <div class="col3">Three columns</div>
+      </div>
+      <div class="row">
+        <div class="col6">Six columns</div>
+        <div class="col6">Six columns</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% highlight html %}
+<div class="row row--demo">
+  <div class="col1">One Column</div>
+  <div class="col1">One Column</div>
+  <div class="col1">One Column</div>
+  <div class="col1">One Column</div>
+  <div class="col1">One Column</div>
+  <div class="col1">One Column</div>
+  <div class="col1">One Column</div>
+  <div class="col1">One Column</div>
+  <div class="col1">One Column</div>
+  <div class="col1">One Column</div>
+  <div class="col1">One Column</div>
+  <div class="col1">One Column</div>
+</div>
+{% endhighlight %}
+
+<h2>Mobile and Tablet Grids</h2>
+
+<p>Sometimes you don't want your columns to immediately stack on mobile or tablet</p>
+
+<h3>Mobile Grid</h3>
+
+<div class="ss-example">
+  <div class="row row--demo">
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+  </div>
+</div>
+
+<h3>Tablet Grid</h3>

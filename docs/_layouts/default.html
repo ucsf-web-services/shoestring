@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    {% include header.html %}
+  </head>
+  <body class="ss-docs-home">
+    {% include nav/topheader.html %}
+
+      
+      {% include nav/main.html %}
+      <!-- Master nav -->
+      <div class="ss-docs-header" id="content" tabindex="-1">
+        <div class="container">
+          <h1>{{ page.title }}</h1>
+          <p>{{ page.lead }}</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col9">
+            {{ content }}
+          </div>
+          <div class="col3">
+            {% if page.slug == "getting-started" %}
+              {% include nav/getting-started.html %}
+            {% elsif page.slug == "css" %}
+              {% include nav/css.html %}
+            {% elsif page.slug == "components" %}
+              {% include nav/components.html %}
+            {% elsif page.slug == "js" %}
+              {% include nav/javascript.html %}
+            {% elsif page.slug == "customize" %}
+              {% include nav/customize.html %}
+            {% elsif page.slug == "about" %}
+              {% include nav/about.html %}
+            {% elsif page.slug == "migration" %}
+              {% include nav/migration.html %}
+            {% endif %}
+          </div>
+        </div>
+      </div>
+      {% include footer.html %}
+  </body>
+</html>
