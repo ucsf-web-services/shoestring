@@ -14,3 +14,5 @@ limit_posts: 0
 
 source: 'docs'
 destination: '_gh_pages'
+
+repo: https://github.com/ucsf-web-services/shoestring
