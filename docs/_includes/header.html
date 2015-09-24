@@ -1,0 +1,41 @@
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shoestring, a framework for UCSF developers and contractors">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, shoestring, front-end, frontend, web development">
+<meta name="author" content="Richard Baker and Shoestring contributors">
+
+<title>
+  {% if page.title == "Home" %}
+    {{ site.title }} &middot; {{ site.tagline }}
+  {% else %}
+    {{ page.title }} &middot; {{ site.title }}
+  {% endif %}
+</title>
+
+<!-- Documentation Page CSS -->
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/docs.css">
+<link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/pygments-github.css">
+
+<!-- Shoestring CSS -->
+
+
+<!-- build:css /assets/stylesheets/style.min.css -->
+<link rel="stylesheet" href="{{ site.baseurl }}/dist/css/shoestring.css">
+<!-- endbuild -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+<!-- JS -->
+<!-- build:js /assets/javascript/all.min.js -->
+<script src="{{ site.baseurl }}/assets/javascript/javascript.js"></script> 
+<script src="{{ site.baseurl }}/assets/javascript/somejavascript.js"></script> 
+<!-- endbuild -->
+
+<!-- Icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}/assets/images/touch/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+

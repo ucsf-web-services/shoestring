@@ -1,0 +1,21 @@
+# Title, decription, tagline and URL
+title: 				Shoestring
+description: 		CSS and JS Framework for UCSF
+url:		 		localhost:3000
+
+permalink:          pretty
+
+source: 			docs
+destination: 		_serve
+host: 		 		0.0.0.0
+port: 		 		9001
+encoding:	 		UTF-8
+
+# Markdown library
+markdown: 			kramdown
+highlighter: 		rouge
+
+# Markdown library options
+redcarpet:
+  extensions: ['no_intra_emphasis', 'tables', 'fenced_code_blocks', 'autolink', 'smart',
+              'strikethrough', 'superscript', 'underline', 'highlight', 'footnotes']
