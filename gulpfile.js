@@ -9,7 +9,6 @@ var gulp        = require("gulp"),
     reload      = browserSync.reload,
     pkg         = require('./package.json'),
     bs;
-
 // Deletes the directory that is used to serve the site during development
 gulp.task("clean:dev", del.bind(null, ["serve"]));
   
@@ -37,10 +36,25 @@ gulp.task('templates', function() {
 // Almost identical to the above task, but instead we load in the build configuration
 // that overwrites some of the settings in the regular configuration so that you
 // don"t end up publishing your drafts or future posts
-gulp.task("jekyll:prod", $.shell.task("jekyll build --config _config.yml,_config.build.yml"));
+gulp.task("jekyll:prod", $.shell.task("jekyll build --config _config.build.yml")); // took _config.yml, out 
   
 // Compiles the SASS files and moves them into the "assets/stylesheets" directory
-gulp.task("styles", function () {
+gulp.task("styles:dev", function () {
+  // Looks at the style.scss file for what to include and creates a style.css file
+  return gulp.src("scss/shoestring.scss")
+    .pipe($.sass())
+    // AutoPrefix your CSS so it works between browsers
+    .pipe($.autoprefixer("last 1 version", { cascade: true }))
+    // Directory your CSS file goes to
+    .pipe(gulp.dest("docs/dist/css/"))
+    .pipe(gulp.dest("_serve/dist/css"))
+    .pipe(gulp.dest("dist/css/"))
+    // Outputs the size of the CSS file
+    .pipe($.size({title: "styles"}))
+    // Injects the CSS changes to your browser since Jekyll doesn't rebuild the CSS
+    .pipe(reload({stream: true}));
+});
+gulp.task("styles:prod", function () {
   // Looks at the style.scss file for what to include and creates a style.css file
   return gulp.src("scss/shoestring.scss")
     .pipe($.sass())
@@ -125,17 +139,17 @@ gulp.task("html", ["styles"], function () {
 // Task to upload your site to your personal GH Pages repo
 gulp.task("deploy", $.shell.task("git subtree push --prefix _gh_pages ucsf-web-services gh-pages"));
 
+// Deploys your optimized site, you can change the settings in the html task if you want to
 
-//   function () {
-//   // Deploys your optimized site, you can change the settings in the html task if you want to
-  
+// gulp.task('deploy', function() {
 //   return gulp.src("./_gh_pages/**/*")
 //     .pipe($.ghPages({
-//       // Currently only personal GitHub Pages are supported so it will upload to the master
-//       // branch and automatically overwrite anything that is in the directory
-//       branch: "gh-pages"
-//       }));
-// });
+//     // Currently only personal GitHub Pages are supported so it will upload to the master
+//     // branch and automatically overwrite anything that is in the directory
+//       branch: "master"
+//     )};
+//   });
+// ));
   
 // Run JS Lint against your JS
 gulp.task("jslint", function () {
@@ -152,12 +166,12 @@ gulp.task("doctor", $.shell.task("jekyll doctor"));
 // BrowserSync will serve our site on a local server for us and other devices to use
 // It will also autoreload across all devices as well as keep the viewport synchronized
 // between them.
-gulp.task("serve:dev", ["styles", "jekyll:dev"], function () {
+gulp.task("serve:dev", ["styles:dev", "jekyll:dev"], function () {
   bs = browserSync({
     notify: true,
     // tunnel: "",
     server: {
-      baseDir: "_gh_pages"
+      baseDir: "_serve"
     }
   });
 });
@@ -189,8 +203,8 @@ gulp.task("default", ["serve:dev", "watch"]);
   // Checks your CSS, JS and Jekyll for errors
 gulp.task("check", ["jslint", "doctor"], function () {});
 
-  // Builds the site but doesn"t serve it to you
-gulp.task("build", ["jekyll:prod", "styles"], function () {});
+  // Builds the _gh_pages for production, but doesn't serve it to you. 
+gulp.task("build", ["jekyll:prod", "styles:prod"], function () {});
 
   // Builds your site with the "build" command and then runs all the optimizations on
   // it and outputs it to "./_gh_pages"
