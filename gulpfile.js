@@ -104,9 +104,8 @@ gulp.task("copy", function () {
 });
 
 // Optimizes all the CSS, HTML and concats the JS etc
-gulp.task("html", ["styles"], function () {
+gulp.task("html", ["styles:prod"], function () {
   var assets = $.useref.assets({searchPath: "_gh_pages"});
-
   return gulp.src("docs/**/*.html")
     .pipe(assets)
     // Concatenate JavaScript files and preserve important comments
@@ -140,16 +139,14 @@ gulp.task("html", ["styles"], function () {
 //gulp.task("deploy", $.shell.task("git subtree push --prefix _gh_pages ucsf-web-services gh-pages"));
 
 // Deploys your optimized site, you can change the settings in the html task if you want to
+var options = { 
+  remoteUrl: "git@github.com:ucsf-web-services/shoestring.git",
+  branch: "gh-pages"};
 
-// gulp.task('deploy', function() {
-//   return gulp.src("./_gh_pages/**/*")
-//     .pipe($.ghPages({
-//     // Currently only personal GitHub Pages are supported so it will upload to the master
-//     // branch and automatically overwrite anything that is in the directory
-//       branch: "master"
-//     )};
-//   });
-// ));
+gulp.task('deploy', function() {
+  return gulp.src("./_gh_pages/**/*")
+    .pipe($.ghPages(options));
+});
   
 // Run JS Lint against your JS
 gulp.task("jslint", function () {
