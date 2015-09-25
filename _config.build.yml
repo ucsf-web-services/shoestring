@@ -4,6 +4,9 @@
 # Overrides the default URL, needed for your atom feed and sitemap
 url: https://github.com/ucsf-web-services/shoestring
 baseurl: /shoestring
+relative_permalinks: false
+permalink:          pretty
+
 # Hides your drafts and future posts
 future: false
 show_drafts: false
