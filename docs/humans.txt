@@ -3,14 +3,14 @@
 
 # TEAM
 
-    Richard -- <role> -- @
+    Richard -- Lead Developer -- 
 
 # THANKS
 
-    <name>
+    For all the contributers 
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3, JavaScript
-    Jekyll, Lanyon/Poole, HTML5 Boilerplate
-    Yeoman, Jekyllized
+    Jekyll, Jekyllized, Gulp, 
+    Sass
