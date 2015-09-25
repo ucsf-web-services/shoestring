@@ -141,8 +141,7 @@ gulp.task("html", ["styles:prod"], function () {
 // Deploys your optimized site, you can change the settings in the html task if you want to
 var options = { 
   remoteUrl: 'git@github.com:ucsf-web-services/shoestring.git',
-  branch: 'gh-pages',
-  cacheDir: '_gh_pages'};
+  branch: 'gh-pages'};
 
 gulp.task('deploy', function() {
   return gulp.src("./_gh_pages/**/*")
