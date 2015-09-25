@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<!-- Enable responsiveness on mobile devices-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Shoestring, a framework for UCSF developers and contractors">
+<meta name="keywords" content="HTML, CSS, JS, JavaScript, framework, shoestring, front-end, frontend, web development">
+<meta name="author" content="Richard Baker and Shoestring contributors">
+
+<title>
+  
+    CSS &middot; 
+  
+</title>
+
+<!-- Documentation Page CSS -->
+<link rel="stylesheet" type="text/css" href="/shoestring/assets/css/docs.css">
+<link rel="stylesheet" type="text/css" href="/shoestring/assets/css/pygments-github.css">
+
+<!-- Shoestring CSS -->
+
+
+<!-- build:css /assets/stylesheets/style.min.css -->
+<link rel="stylesheet" href="/shoestring/dist/css/shoestring.css">
+<!-- endbuild -->
+<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+<!-- JS -->
+<!-- build:js /assets/javascript/all.min.js -->
+<script src="/shoestring/assets/javascript/javascript.js"></script> 
+<script src="/shoestring/assets/javascript/somejavascript.js"></script> 
+<!-- endbuild -->
+
+<!-- Icons -->
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/shoestring/assets/images/touch/apple-touch-icon-144-precomposed.png">
+<link rel="shortcut icon" href="/assets/favicon.ico">
+
+<!-- RSS -->
+<link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+
+
+  </head>
+  <body class="ss-docs-home">
+    <div id="ucsf-banner-nav" class="">
+  <div class="top-header-container row">
+      <ul class="menu">
+        <li class="first"><a href="http://www.ucsf.edu">University of California San Francisco</a></li>
+        <li><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
+        <li><a href="http://www.ucsf.edu/search" title="">Search UCSF</a></li>
+        <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
+      </ul>
+  </div>
+</div>
+
+      
+      <header class="navbar ss-docs-nav" id="top" role="banner">
+  <div class="container">
+    <div class="navbar-header">
+      <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#cc-navbar" aria-controls="cc-navbar" aria-expanded="false">
+        <!-- <span class="sr-only">Toggle navigation</span> -->
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a href="../" class="navbar-brand">Shoestring</a>
+    </div>
+    <nav id="ss-navbar" class="collapse navbar-collapse">
+      <ul class="nav navbar-nav">
+        <li class="active">
+          <a href="/shoestring/css/">CSS</a>
+        </li>
+        <li>
+          <a href="/shoestring/components/">Components</a>
+        </li>
+        <li>
+          <a href="/shoestring/javascript/">JavaScript</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+      <!-- Master nav -->
+      <div class="ss-docs-header" id="content" tabindex="-1">
+        <div class="container">
+          <h1>CSS</h1>
+          <p>Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.</p>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col9">
+            <h1>Overview</h1>
+
+<h2>Jquery</h2>
+
+<p>Shoestring runs off of the latest version of jQuery. Please visit <a href="https://jquery.com/">jquery.com</a> to download to include in project. Make sure to place jquery before shoestring in your header or end of body.</p>
+
+<h2>Normalize.css</h2>
+
+<p>To set everything at a state that renders all browsers the same Normalize.css is included. Normalize.css is created by <a href="https://twitter.com/necolas" target="_blank">Nicolas Gallagher</a>.</p>
+<h1>Banner</h1>
+<h2>Banner Default</h2>
+<p>Use the color classes <code>green</code> <code>light-blue</code> <code>orange</code> <code>teal</code> <code>purple</code> <code>red</code> to change the color of the banner. The default without a class is navy blue.</p>
+
+<p>Also, if you have a specific centered width layout. Make sure to place the banner outside of that container as the banner needs to span the entire width of the page. This can be seen being used live at <a href="https://www.ucsf.edu">www.ucsf.edu</a>.</p>
+
+<div class="ss-example">
+	<div class="ss-example-title">Example</div>
+	<div id="ucsf-banner-nav" class="">
+	  <div class="top-header-container row">
+	      <ul class="menu">
+	        <li class="first"><a href="http://www.ucsf.edu">University of California San Francisco</a></li>
+	        <li><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
+	        <li><a href="http://www.ucsf.edu/search" title="">Search UCSF</a></li>
+	        <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
+	      </ul>
+	  </div>
+	</div>
+	<div id="ucsf-banner-nav" class="green">
+	  <div class="top-header-container row">
+	      <ul class="menu">
+	        <li class="first"><a href="http://www.ucsf.edu">University of California San Francisco</a></li>
+	        <li><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
+	        <li><a href="http://www.ucsf.edu/search" title="">Search UCSF</a></li>
+	        <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
+	      </ul>
+	  </div>
+	</div>
+	<div id="ucsf-banner-nav" class="light-blue">
+	  <div class="top-header-container row">
+	      <ul class="menu">
+	        <li class="first"><a href="http://www.ucsf.edu">University of California San Francisco</a></li>
+	        <li><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
+	        <li><a href="http://www.ucsf.edu/search" title="">Search UCSF</a></li>
+	        <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
+	      </ul>
+	  </div>
+	</div>
+	<div id="ucsf-banner-nav" class="orange">
+	  <div class="top-header-container row">
+	      <ul class="menu">
+	        <li class="first"><a href="http://www.ucsf.edu">University of California San Francisco</a></li>
+	        <li><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
+	        <li><a href="http://www.ucsf.edu/search" title="">Search UCSF</a></li>
+	        <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
+	      </ul>
+	  </div>
+	</div>
+	<div id="ucsf-banner-nav" class="teal">
+	  <div class="top-header-container row">
+	      <ul class="menu">
+	        <li class="first"><a href="http://www.ucsf.edu">University of California San Francisco</a></li>
+	        <li><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
+	        <li><a href="http://www.ucsf.edu/search" title="">Search UCSF</a></li>
+	        <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
+	      </ul>
+	  </div>
+	</div>
+	<div id="ucsf-banner-nav" class="purple">
+	  <div class="top-header-container row">
+	      <ul class="menu">
+	        <li class="first"><a href="http://www.ucsf.edu">University of California San Francisco</a></li>
+	        <li><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
+	        <li><a href="http://www.ucsf.edu/search" title="">Search UCSF</a></li>
+	        <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
+	      </ul>
+	  </div>
+	</div>
+	<div id="ucsf-banner-nav" class="red">
+	  <div class="top-header-container row">
+	      <ul class="menu">
+	        <li class="first"><a href="http://www.ucsf.edu">University of California San Francisco</a></li>
+	        <li><a href="http://www.ucsfhealth.org/">UCSF Medical Center</a></li>
+	        <li><a href="http://www.ucsf.edu/search" title="">Search UCSF</a></li>
+	        <li><a href="http://www.ucsf.edu/about">About UCSF</a></li>
+	      </ul>
+	  </div>
+	</div>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">&quot;ucsf-banner-nav&quot;</span> <span class="na">class=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;top-header-container row&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">&quot;menu&quot;</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">&quot;first&quot;</span><span class="nt">&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://www.ucsf.edu&quot;</span><span class="nt">&gt;</span>University of California San Francisco<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://www.ucsfhealth.org/&quot;</span><span class="nt">&gt;</span>UCSF Medical Center<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://www.ucsf.edu/search&quot;</span> <span class="na">title=</span><span class="s">&quot;&quot;</span><span class="nt">&gt;</span>Search UCSF<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">href=</span><span class="s">&quot;http://www.ucsf.edu/about&quot;</span><span class="nt">&gt;</span>About UCSF<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+      <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<h1>UCSF Brand Colors</h1>
+
+<p>Based on <a target="_blank" href="https://identity.ucsf.edu" >identity</a> standards Shoestring's elements, components, classes and theme is based on the following palette</p>
+
+<div class="ss-example">
+  <ul class="palette ng-scope">
+    <li>
+      <h3>Oxford Blue</h3>
+      <div style="background-color: #052049;" class="color"><span>#052049</span></div>
+      <div style="background-color: #506380;" class="color"><span>#052049</span></div>
+      <div style="background-color: #9BA6B6;" class="color"><span>#052049</span></div>
+      <div style="background-color: #E6E9ED;" class="color"><span>#052049</span></div>
+    </li>
+    <li>
+      <h3>Blue Green</h3>
+      <div style="background-color: #18A3AC;" class="color"><span>#18A3AC</span></div>
+      <div style="background-color: #5DBFC5;" class="color"><span>#18A3AC</span></div>
+      <div style="background-color: #A3DADE;" class="color"><span>#18A3AC</span></div>
+      <div style="background-color: #E8F6F7;" class="color"><span>#18A3AC</span></div>
+      <!--<div style="background-color: #1F253D;" class="color"><span>#1F253D</span></div>-->
+    </li>
+    <li>
+      <h3>Yellow Green</h3>
+      <div style="background-color: #90BD31;" class="color"><span>#90BD31</span></div>
+      <div style="background-color: #B1D16F;" class="color"><span>#90BD31</span></div>
+      <div style="background-color: #D3E4AD;" class="color"><span>#90BD31</span></div>
+      <div style="background-color: #F4F8EA;" class="color"><span>#90BD31</span></div>
+    </li>
+    <li>
+      <h3>Rich Electric Blue</h3>
+      <div style="background-color: #178CCB;" class="color"><span>#178CCB</span></div>
+      <div style="background-color: #5DAFDB;" class="color"><span>#178CCB</span></div>
+      <div style="background-color: #A2D1EA;" class="color"><span>#178CCB</span></div>
+      <div style="background-color: #E8F4FA;" class="color"><span>#178CCB</span></div>
+    </li>
+    <li>
+      <h3>Cadmium Orange</h3>
+      <div style="background-color: #F48024;" class="color"><span>#F48024</span></div>
+      <div style="background-color: #F7A665;" class="color"><span>#F48024</span></div>
+      <div style="background-color: #FBCCA7;" class="color"><span>#F48024</span></div>
+      <div style="background-color: #FEF2E9;" class="color"><span>#F48024</span></div>
+    </li>
+    <li>
+      <h3>Chetwode Blue</h3>
+      <div style="background-color: #716FB2;" class="color"><span>#716FB2</span></div>
+      <div style="background-color: #9C9AC9;" class="color"><span>#716FB2</span></div>
+      <div style="background-color: #C6C5E0;" class="color"><span>#716FB2</span></div>
+      <div style="background-color: #F1F1F7;" class="color"><span>#716FB2</span></div>
+    </li>
+    <li>
+      <h3>Red</h3>
+      <div style="background-color: #EC1848;" class="color"><span>#EC1848</span></div>
+      <div style="background-color: #F25D7F;" class="color"><span>#EC1848</span></div>
+      <div style="background-color: #F7A3B6;" class="color"><span>#EC1848</span></div>
+      <div style="background-color: #FDE8ED;" class="color"><span>#EC1848</span></div>
+    </li>
+    <li>
+      <h3>Golden Yellow</h3>
+      <div style="background-color: #FFDD00;" class="color"><span>#FFDD00</span></div>
+      <div style="background-color: #FFE74D;" class="color"><span>#FFDD00</span></div>
+      <div style="background-color: #FFF199;" class="color"><span>#FFDD00</span></div>
+      <div style="background-color: #FFFCE6;" class="color"><span>#FFDD00</span></div>
+    </li>
+  </ul>
+</div>
+
+<ul class="palette ng-scope">
+  
+</ul>
+<h1>Grid System</h1>
+
+<p>Shoestring has a 12 column responsive mobile first grid system built right in!</p>
+
+<p>With a grid system you can easily create page layouts that are responsive/mobile friendly</p>
+
+<h2>Information</h2>
+
+<ul>
+  <li>All columns must be placed inside a <code>.row</code> div container for the grid to work.</li>
+  <li>Adding <code>col1</code>, <code>columns-2</code>, etc.. to your class name will make that column span how many columns.</li>
+  <li>The columns must equal twelve to fit correctly inside the row.</li>
+  <li></li>
+  <li></li>
+</ul>
+
+<div class="block--preview">
+  <div class="ui-panel">
+    <div class="panel-title">
+      <h2>Example</h2>
+    </div>
+    <div class="panel-body">
+      <div class="row row--demo">
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+        <div class="col1">One Column</div>
+      </div>
+      <div class="row">
+        <div class="col12">Twelve columns</div>
+      </div>
+      <div class="row">
+        <div class="col8">Eight columns</div>
+        <div class="col4">Four columns</div>
+      </div>
+      <div class="row">
+        <div class="col4">Four columns</div>
+        <div class="col4">Four columns</div>
+        <div class="col4">Four columns</div>
+      </div>
+      <div class="row">
+        <div class="col3">Three columns</div>
+        <div class="col3">Three columns</div>
+        <div class="col3">Three columns</div>
+        <div class="col3">Three columns</div>
+      </div>
+      <div class="row">
+        <div class="col6">Six columns</div>
+        <div class="col6">Six columns</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;row row--demo&quot;</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col1&quot;</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col1&quot;</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col1&quot;</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col1&quot;</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col1&quot;</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col1&quot;</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col1&quot;</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col1&quot;</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col1&quot;</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col1&quot;</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col1&quot;</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;col1&quot;</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></code></pre></div>
+
+<h2>Mobile and Tablet Grids</h2>
+
+<p>Sometimes you don't want your columns to immediately stack on mobile or tablet</p>
+
+<h3>Mobile Grid</h3>
+
+<div class="ss-example">
+  <div class="row row--demo">
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+    <div class="col1 phone-1">one</div>
+  </div>
+</div>
+
+<h3>Tablet Grid</h3>
+<h1>Typography</h1>
+
+<p>Shoestring comes with a bunch of UCSF centric font styles all the way from <code>p</code> to <code>h1</code></p>
+
+<h2>Font Awesome</h2>
+
+<p>Shoestring brings <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> to the table.</p>
+
+<p>Font Awesome includes:</p>
+
+<ul>
+	<li>Spinners</li>
+	<li></li>
+	<li></li>
+</ul>
+
+<h1>Buttons</h1>
+
+<p>Use the button classes on <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> elements.</p>
+
+<div class="cc-example">
+	<button class="btn">Button</button>
+	<a class="btn" href="#">Link</a>
+	<input type="button" class="btn" value="Input">
+	<input type="submit" class="btn" valu="Submit">
+</div>
+
+<h2>Sizes</h2>
+
+<p>Sometimes a default size button isn't enough so we provide classes for alternate sizes</p>
+
+<div class="cc-example">
+	<button class="btn btn-xs">Extra Small Button</button>
+	<button class="btn btn-small">Small Button</button>
+	<button class="btn btn-default">Default Button</button>
+	<button class="btn btn-lg">Large Button</button>
+</div>
+
+<h2>States</h2>
+
+
+<h2>Options</h2>
+<h1>Forms</h1>
+
+<div class="ss-example">
+  <form>
+    <div class="form-group">
+      <label for="exampleEmail">Email Address:</label>
+      <input type="email" class="form-control" id="exampleEmail" placeholder="email">
+    </div>
+    <div class="form-group">
+      <label for="exampleEmail">Password:</label>
+      <input type="password" class="form-control" id="exampleEmail" placeholder="email">
+    </div>
+    <div class="form-group">
+      <label for="exampleInputFile">File Input:</label>
+      <input id="exampleInputFile" type="file"></input>
+    </div>
+    <div class="checkbox">
+      <label>
+        <input type="checkbox">Yes</input>
+      </label>
+    </div>
+    <button class="btn btn-default" type="submit">Submit</button>
+  </form>
+</div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;exampleEmail&quot;</span><span class="nt">&gt;</span>Email Address:<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;email&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id=</span><span class="s">&quot;exampleEmail&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;email&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;exampleEmail&quot;</span><span class="nt">&gt;</span>Password:<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;password&quot;</span> <span class="na">class=</span><span class="s">&quot;form-control&quot;</span> <span class="na">id=</span><span class="s">&quot;exampleEmail&quot;</span> <span class="na">placeholder=</span><span class="s">&quot;email&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;form-group&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">&quot;exampleInputFile&quot;</span><span class="nt">&gt;</span>File Input:<span class="nt">&lt;/label&gt;</span>
+      <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">&quot;exampleInputFile&quot;</span> <span class="na">type=</span><span class="s">&quot;file&quot;</span><span class="nt">&gt;&lt;/input&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;label&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">&quot;checkbox&quot;</span><span class="nt">&gt;</span>Yes<span class="nt">&lt;/input&gt;</span>
+      <span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">&quot;btn btn-default&quot;</span> <span class="na">type=</span><span class="s">&quot;submit&quot;</span><span class="nt">&gt;</span>Submit<span class="nt">&lt;/button&gt;</span>
+  <span class="nt">&lt;/form&gt;</span></code></pre></div>
+
+          </div>
+          <div class="col3">
+            
+              <li>
+	<a href="#banner">Banner</a>
+</li>
+            
+          </div>
+        </div>
+      </div>
+      
+  </body>
+</html>

@@ -1,0 +1,16 @@
+# humanstxt.org/
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Richard -- Lead Developer -- 
+
+# THANKS
+
+    For all the contributers 
+
+# TECHNOLOGY COLOPHON
+
+    HTML5, CSS3, JavaScript
+    Jekyll, Jekyllized, Gulp, 
+    Sass
