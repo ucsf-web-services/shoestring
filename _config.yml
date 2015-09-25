@@ -3,6 +3,7 @@ title: 				Shoestring
 description: 		CSS and JS Framework for UCSF
 url:		 		localhost:3000
 
+relative_permalinks: false
 permalink:          pretty
 
 source: 			docs
