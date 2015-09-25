@@ -3,10 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "description": "Yeoman workflow for shoestring 1 1",
-  "dependencies": {},
+  "dependencies": {
+    "gulp-autoprefixer": "^3.0.2"
+  },
   "devDependencies": {
     "browser-sync": "^1.5.7",
-    "del": "^1.1.1",
+    "del": "^2.0.2",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^2.0.0",
     "gulp-cache": "~0.2.2",
