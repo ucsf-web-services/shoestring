@@ -137,7 +137,7 @@ gulp.task("html", ["styles"], function () {
   
   
 // Task to upload your site to your personal GH Pages repo
-gulp.task("deploy", $.shell.task("git subtree push --prefix _gh_pages ucsf-web-services gh-pages"));
+//gulp.task("deploy", $.shell.task("git subtree push --prefix _gh_pages ucsf-web-services gh-pages"));
 
 // Deploys your optimized site, you can change the settings in the html task if you want to
 
