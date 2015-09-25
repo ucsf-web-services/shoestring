@@ -1,3 +1,7 @@
+// TODO 
+// - Saucelabs Automated testing on build
+// - Travis CI Build test 
+
 "use strict";
 
 var gulp        = require("gulp"),
@@ -9,6 +13,9 @@ var gulp        = require("gulp"),
     reload      = browserSync.reload,
     pkg         = require('./package.json'),
     bs;
+
+
+
 // Deletes the directory that is used to serve the site during development
 gulp.task("clean:dev", del.bind(null, ["serve"]));
   
@@ -135,10 +142,7 @@ gulp.task("html", ["styles:prod"], function () {
 });
   
   
-// Task to upload your site to your personal GH Pages repo
-//gulp.task("deploy", $.shell.task("git subtree push --prefix _gh_pages ucsf-web-services gh-pages"));
-
-// Deploys your optimized site, you can change the settings in the html task if you want to
+// Deploys to Github Pages for live site !!WARNING do not run this task!!
 var options = { 
   remoteUrl: 'git@github.com:ucsf-web-services/shoestring.git',
   branch: 'gh-pages'};
@@ -197,14 +201,16 @@ gulp.task("serve:prod", function () {
 // Default task, run when just writing "gulp" in the terminal
 gulp.task("default", ["serve:dev", "watch"]);
 
-  // Checks your CSS, JS and Jekyll for errors
+// Checks your CSS, JS and Jekyll for errors
 gulp.task("check", ["jslint", "doctor"], function () {});
 
-  // Builds the _gh_pages for production, but doesn't serve it to you. 
+// Builds the _gh_pages for production, but doesn't serve it to you. 
 gulp.task("build", ["jekyll:prod", "styles:prod"], function () {});
 
-  // Builds your site with the "build" command and then runs all the optimizations on
-  // it and outputs it to "./_gh_pages"
+// Builds your site with the "build" command and then runs all the optimizations on
+// it and outputs it to "./_gh_pages"
+// !WARNING do not publish. Pull requests for default docs build only
+
 gulp.task("publish", ["build", "deploy"], function () {
   gulp.start("html", "copy", "images", "fonts");
 });

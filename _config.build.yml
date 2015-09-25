@@ -1,11 +1,17 @@
 # Run during the 'gulp build' command
 # Overrides these options in _config.yml
+title: 				Shoestring
+description: 		CSS and JS Framework for UCSF
 
 # Overrides the default URL, needed for your atom feed and sitemap
 url: https://github.com/ucsf-web-services/shoestring
 baseurl: /shoestring
+
 relative_permalinks: false
 permalink:          pretty
+
+source: 'docs'
+destination: '_gh_pages'
 
 # Hides your drafts and future posts
 future: false
@@ -14,7 +20,14 @@ show_drafts: false
 lsi: true
 # Removes the upper limit for posts generated
 limit_posts: 0
-source: 'docs'
-destination: '_gh_pages'
+
+# Markdown library
+markdown: 			kramdown
+highlighter: 		rouge
+
+# Markdown library options
+redcarpet:
+  extensions: ['no_intra_emphasis', 'tables', 'fenced_code_blocks', 'autolink', 'smart',
+              'strikethrough', 'superscript', 'underline', 'highlight', 'footnotes']
 
 repo: https://github.com/ucsf-web-services/shoestring
