@@ -39,7 +39,7 @@
     "sassdoc": "^2.1.15"
   },
   "engines": {
-    "node": ">0.10.0"
+    "node": ">0.12.2"
   },
   "scripts": {}
 }
