@@ -25,6 +25,9 @@ Updating documentation is important, and the people using the product don't tend
 
 1. Make sure you have a [GitHub account](https://github.com/signup/free).
 2. Fork the repository in GitHub with the 'Fork' button.
+3. Clone your forked repo locally and cd into your working directory
+3. Run ```./installer.sh``` in the shoestring directory to install all dependencies.
+* note: ./installer.sh is currently only setup for osx machines.
 
 ### Commit Message
 
