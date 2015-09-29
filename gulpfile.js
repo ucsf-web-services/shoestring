@@ -184,7 +184,7 @@ gulp.task("watch", function () {
   gulp.watch(["docs/**/*.md", "docs/*.html", "docs/**/*.html", "docs/**/*.xml", "docs/**/*.txt", "docs/**/*.js", "docs/**/*.css"], ["jekyll-rebuild"]);
   gulp.watch(["dist/css/*.css"], reload);
   gulp.watch(["docs/assets/css/*.css"], reload);
-  gulp.watch(["scss/*.scss"], ["styles"]);
+  gulp.watch(["scss/*.scss"], ["styles:dev"]);
 });
   
 // Serve the site after optimizations to see that everything looks fine

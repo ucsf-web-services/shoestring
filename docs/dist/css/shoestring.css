@@ -584,10 +584,13 @@ $BUTTONS
   float: left;
   padding: 0 3% 0 0; }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both; }
+.row {
+  margin-left: 15px;
+  margin-right: 15px; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
 
 /*------------------------------------*\
     FORM ELEMENT STYLES
