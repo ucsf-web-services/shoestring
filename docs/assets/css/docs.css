@@ -108,3 +108,16 @@ Colors
 .logo-header {
   width: 150px;
 }
+
+/*
+
+Grid
+
+*/
+
+.show-grid [class^=col]{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #E8F6F7;
+  border: 1px solid #58BFC6;
+}
