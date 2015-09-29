@@ -29,6 +29,13 @@ Updating documentation is important, and the people using the product don't tend
 3. Run ```./installer.sh``` in the shoestring directory to install all dependencies.
 * note: ./installer.sh is currently only setup for osx machines.
 
+Alt: If you are on windows or linux and can't run the installer script, the current dependencies are needed to contribute and run shoestring locally.
+
+- Ruby
+- Node
+- Bundler
+- Npm
+
 ### Commit Message
 
 Some good rules for commit messages are
