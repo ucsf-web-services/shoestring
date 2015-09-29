@@ -1,4 +1,4 @@
-# Shoestring 
+# Shoestring  https://travis-ci.org/ucsf-web-services/shoestring.svg?branch=master
 [http://ucsf-web-services.github.io/shoestring](http://ucsf-web-services.github.io/shoestring)
 
 Shoestring is a front-end pattern library complementing the [UCSF Identity Guidelines](http://identity.ucsf.edu/website).
