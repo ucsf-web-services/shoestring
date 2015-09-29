@@ -121,3 +121,18 @@ Grid
   background-color: #E8F6F7;
   border: 1px solid #58BFC6;
 }
+
+/*
+
+Sidebar
+
+*/
+
+.sidebar-nav li{
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.sidebar-nav li a{
+  text-decoration: none;
+}
