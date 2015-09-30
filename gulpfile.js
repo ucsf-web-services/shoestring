@@ -1,9 +1,6 @@
 // TODO 
 // - Saucelabs Automated testing on build
-// - Travis CI Build test 
-
 "use strict";
-
 var gulp        = require("gulp"),
     $           = require("gulp-load-plugins")(),
     del         = require("del"),
@@ -14,38 +11,24 @@ var gulp        = require("gulp"),
     pkg         = require('./package.json'),
     bs;
 
+// UTILITIES //
+// Checks for erros with jekyll and url errors
+gulp.task("doctor", $.shell.task("jekyll doctor"));
 
 
 // Deletes the directory that is used to serve the site during development
 gulp.task("clean:dev", del.bind(null, ["serve"]));
-  
 // Deletes the directory that the optimized site is output to
 gulp.task("clean:prod", del.bind(null, ["_gh_pages"]));
-  
-// Runs the build command for Jekyll to compile the site locally
-// This will build the site with the production settings
+// Runs the build command for Jekyll to compile the site locally // This will build the site with the production settings
 gulp.task("jekyll:dev", $.shell.task("jekyll build"));
-
 gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
   reload;
 });
-  
-gulp.task('templates', function() {
-  var YOUR_LOCALS = {};
 
-  gulp.src('.lib*.jade')
-    .pipe(jade({
-      locals: YOUR_LOCALS
-    }))
-    .pipe(gulp.dest('./dist/'))
-})
-  
-// Almost identical to the above task, but instead we load in the build configuration
-// that overwrites some of the settings in the regular configuration so that you
-// don"t end up publishing your drafts or future posts
 gulp.task("jekyll:prod", $.shell.task("jekyll build --config _config.build.yml")); // took _config.yml, out 
   
-// Compiles the SASS files and moves them into the "assets/stylesheets" directory
+// Compiles the SASS files and moves them into the "dist and server" directory
 gulp.task("styles:dev", function () {
   // Looks at the style.scss file for what to include and creates a style.css file
   return gulp.src("scss/shoestring.scss")
@@ -61,6 +44,7 @@ gulp.task("styles:dev", function () {
     // Injects the CSS changes to your browser since Jekyll doesn't rebuild the CSS
     .pipe(reload({stream: true}));
 });
+
 gulp.task("styles:prod", function () {
   // Looks at the style.scss file for what to include and creates a style.css file
   return gulp.src("scss/shoestring.scss")
@@ -76,15 +60,10 @@ gulp.task("styles:prod", function () {
     // Injects the CSS changes to your browser since Jekyll doesn't rebuild the CSS
     .pipe(reload({stream: true}));
 });
-
-gulp.task('sassdoc', function () {
-  return gulp.src('./scss/*.scss')
-    .pipe(sassdoc());
-})
   
 // Optimizes the images that exists
 gulp.task("images", function () {
-  return gulp.src("docs/assets/images/**")
+  return gulp.src("docs/assets/img/**")
     .pipe($.changed("site/assets/images"))
     .pipe($.imagemin({
       // Lossless conversion to progressive JPGs
@@ -92,7 +71,7 @@ gulp.task("images", function () {
       // Interlace GIFs for progressive rendering
       interlaced: true
     }))
-    .pipe(gulp.dest("site/assets/images"))
+    .pipe(gulp.dest("site/_gh_pages/assets/img"))
     .pipe($.size({title: "images"}));
 });
   
@@ -154,19 +133,13 @@ gulp.task('deploy', function() {
   
 // Run JS Lint against your JS
 gulp.task("jslint", function () {
-  gulp.src("./_gh_pages/assets/javascript/*.js")
+  gulp.src("./dist/js/*.js")
     // Checks your JS code quality against your .jshintrc file
     .pipe($.jshint(".jshintrc"))
     .pipe($.jshint.reporter());
 });
-  
-// Runs "jekyll doctor" on your site to check for errors with your configuration
-// and will check for URL errors a well
-gulp.task("doctor", $.shell.task("jekyll doctor"));
-  
-// BrowserSync will serve our site on a local server for us and other devices to use
-// It will also autoreload across all devices as well as keep the viewport synchronized
-// between them.
+    
+// Browsersync serving server from _serve
 gulp.task("serve:dev", ["styles:dev", "jekyll:dev"], function () {
   bs = browserSync({
     notify: true,
@@ -177,16 +150,6 @@ gulp.task("serve:dev", ["styles:dev", "jekyll:dev"], function () {
   });
 });
 
-  
-// These tasks will look for files that change while serving and will auto-regenerate or
-// reload the website accordingly. Update or add other files you need to be watched.
-gulp.task("watch", function () {
-  gulp.watch(["docs/**/*.md", "docs/*.html", "docs/**/*.html", "docs/**/*.xml", "docs/**/*.txt", "docs/**/*.js", "docs/**/*.css"], ["jekyll-rebuild"]);
-  gulp.watch(["dist/css/*.css"], reload);
-  gulp.watch(["docs/assets/css/*.css"], reload);
-  gulp.watch(["scss/*.scss"], ["styles:dev"]);
-});
-  
 // Serve the site after optimizations to see that everything looks fine
 gulp.task("serve:prod", function () {
   bs = browserSync({
@@ -197,13 +160,20 @@ gulp.task("serve:prod", function () {
     }
   });
 });
-  
+
+// Watch for changes 
+gulp.task("watch", function () {
+  gulp.watch(["docs/**/*.md", "docs/*.html", "docs/**/*.html", "docs/**/*.xml", "docs/**/*.txt", "docs/**/*.js", "docs/**/*.css"], ["jekyll-rebuild"]);
+  gulp.watch(["dist/css/*.css"], reload);
+  gulp.watch(["docs/assets/css/*.css"], reload);
+  gulp.watch(["js/*.js"], reload);
+  gulp.watch(["scss/*.scss"], ["styles:dev"]);
+});
+    
 // Default task, run when just writing "gulp" in the terminal
 gulp.task("default", ["serve:dev", "watch"]);
-
 // Checks your CSS, JS and Jekyll for errors
 gulp.task("check", ["jslint", "doctor"], function () {});
-
 // Builds the _gh_pages for production, but doesn't serve it to you. 
 gulp.task("build", ["jekyll:prod", "styles:prod"], function () {});
 
