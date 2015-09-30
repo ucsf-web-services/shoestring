@@ -543,51 +543,56 @@ $BUTTONS
 /*------------------------------------*\
     GRID.CSS
 \*------------------------------------*/
-.col1 {
-  width: 5.5%; }
-
-.col2 {
-  width: 14%; }
-
-.col3 {
-  width: 22.5%; }
-
-.col4 {
-  width: 31%; }
-
-.col5 {
-  width: 39.5%; }
-
-.col6 {
-  width: 48%; }
-
-.col7 {
-  width: 56.5%; }
-
-.col8 {
-  width: 65%; }
-
-.col9 {
-  width: 73.5%; }
-
-.col10 {
-  width: 82%; }
-
-.col11 {
-  width: 90.5%; }
-
-.col12 {
-  width: 99%;
-  margin: 0; }
-
 .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12 {
   float: left;
-  padding: 0 3% 0 0; }
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+  min-height: 1px; }
 
-.row:after {
-  content: "";
-  display: table;
-  clear: both; }
+.row {
+  margin-left: 15px;
+  margin-right: 15px; }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.col1 {
+  width: 8.33333%; }
+
+.col2 {
+  width: 16.66667%; }
+
+.col3 {
+  width: 25%; }
+
+.col4 {
+  width: 33.33333%; }
+
+.col5 {
+  width: 41.66667%; }
+
+.col6 {
+  width: 50%; }
+
+.col7 {
+  width: 58.33333%; }
+
+.col8 {
+  width: 66.66667%; }
+
+.col9 {
+  width: 75%; }
+
+.col10 {
+  width: 83.33333%; }
+
+.col11 {
+  width: 91.66667%; }
+
+.col12 {
+  width: 100%; }
 
 /*------------------------------------*\
     FORM ELEMENT STYLES
