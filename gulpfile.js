@@ -122,6 +122,7 @@ gulp.task("html", ["styles:prod"], function () {
   
   
 // Deploys to Github Pages for live site !!WARNING do not run this task!!
+// Not that you can without ssh access to master repo anyway. Don't change either way.
 var options = { 
   remoteUrl: 'git@github.com:ucsf-web-services/shoestring.git',
   branch: 'gh-pages'};
