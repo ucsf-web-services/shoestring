@@ -92,7 +92,7 @@
       </div>
       <div class="container">
         <div class="row">
-          <div class="col9">
+          <div class="col10">
             <h1>Overview</h1>
 
 <h2>Jquery</h2>
@@ -270,94 +270,107 @@
 
 <ul>
   <li>All columns must be placed inside a <code>.row</code> div container for the grid to work.</li>
-  <li>Adding <code>col1</code>, <code>columns-2</code>, etc.. to your class name will make that column span how many columns.</li>
+  <li>Adding <code>col1</code>, <code>col2</code>, etc.. to your class name will make that column span how many columns.</li>
   <li>The columns must equal twelve to fit correctly inside the row.</li>
-  <li></li>
-  <li></li>
 </ul>
 
-<div class="block--preview">
-  <div class="ui-panel">
-    <div class="panel-title">
-      <h2>Example</h2>
-    </div>
-    <div class="panel-body">
-      <div class="row row--demo">
-        <div class="col1">One Column</div>
-        <div class="col1">One Column</div>
-        <div class="col1">One Column</div>
-        <div class="col1">One Column</div>
-        <div class="col1">One Column</div>
-        <div class="col1">One Column</div>
-        <div class="col1">One Column</div>
-        <div class="col1">One Column</div>
-        <div class="col1">One Column</div>
-        <div class="col1">One Column</div>
-        <div class="col1">One Column</div>
-        <div class="col1">One Column</div>
-      </div>
-      <div class="row">
-        <div class="col12">Twelve columns</div>
-      </div>
-      <div class="row">
-        <div class="col8">Eight columns</div>
-        <div class="col4">Four columns</div>
-      </div>
-      <div class="row">
-        <div class="col4">Four columns</div>
-        <div class="col4">Four columns</div>
-        <div class="col4">Four columns</div>
-      </div>
-      <div class="row">
-        <div class="col3">Three columns</div>
-        <div class="col3">Three columns</div>
-        <div class="col3">Three columns</div>
-        <div class="col3">Three columns</div>
-      </div>
-      <div class="row">
-        <div class="col6">Six columns</div>
-        <div class="col6">Six columns</div>
-      </div>
-    </div>
+<div class="ss-example">
+  <div class="row row--demo show-grid">
+    <div class="col1">One Column</div>
+    <div class="col1">One Column</div>
+    <div class="col1">One Column</div>
+    <div class="col1">One Column</div>
+    <div class="col1">One Column</div>
+    <div class="col1">One Column</div>
+    <div class="col1">One Column</div>
+    <div class="col1">One Column</div>
+    <div class="col1">One Column</div>
+    <div class="col1">One Column</div>
+    <div class="col1">One Column</div>
+    <div class="col1">One Column</div>
+  </div>
+  <div class="row show-grid">
+    <div class="col12">Twelve columns</div>
+  </div>
+  <div class="row show-grid">
+    <div class="col8">Eight columns</div>
+    <div class="col4">Four columns</div>
+  </div>
+  <div class="row show-grid">
+    <div class="col4">Four columns</div>
+    <div class="col4">Four columns</div>
+    <div class="col4">Four columns</div>
+  </div>
+  <div class="row show-grid">
+    <div class="col3">Three columns</div>
+    <div class="col3">Three columns</div>
+    <div class="col3">Three columns</div>
+    <div class="col3">Three columns</div>
+  </div>
+  <div class="row show-grid">
+    <div class="col6">Six columns</div>
+    <div class="col6">Six columns</div>
   </div>
 </div>
-
-<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row row--demo"</span><span class="nt">&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
-  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></code></pre></div>
+<div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col1"</span><span class="nt">&gt;</span>One Column<span class="nt">&lt;/div&gt;</span>
+  <span class="nt">&lt;/div&gt;</span></code></pre></div>
 
 <h2>Mobile and Tablet Grids</h2>
 
-<p>Sometimes you don't want your columns to immediately stack on mobile or tablet</p>
+<p>Sometimes you don't want your columns to immediately stack on mobile or tablet. Just prefix the phone- with how many columns you want</p>
 
 <h3>Mobile Grid</h3>
 
 <div class="ss-example">
-  <div class="row row--demo">
-    <div class="col1 phone-1">one</div>
-    <div class="col1 phone-1">one</div>
-    <div class="col1 phone-1">one</div>
-    <div class="col1 phone-1">one</div>
-    <div class="col1 phone-1">one</div>
-    <div class="col1 phone-1">one</div>
-    <div class="col1 phone-1">one</div>
-    <div class="col1 phone-1">one</div>
-    <div class="col1 phone-1">one</div>
-    <div class="col1 phone-1">one</div>
-    <div class="col1 phone-1">one</div>
-    <div class="col1 phone-1">one</div>
+  <div class="row row--demo show-grid">
+    <div class="mobile-1">one</div>
+    <div class="mobile-1">one</div>
+    <div class="mobile-1">one</div>
+    <div class="mobile-1">one</div>
+    <div class="mobile-1">one</div>
+    <div class="mobile-1">one</div>
+    <div class="mobile-1">one</div>
+    <div class="mobile-1">one</div>
+    <div class="mobile-1">one</div>
+    <div class="mobile-1">one</div>
+    <div class="mobile-1">one</div>
+    <div class="mobile-1">one</div>
   </div>
+ <div class="row show-grid">
+    <div class="mobile-12">Twelve columns</div>
+  </div>
+  <div class="row show-grid">
+    <div class="mobile-8">Eight columns</div>
+    <div class="mobile-4">Four columns</div>
+  </div>
+  <div class="row show-grid">
+    <div class="mobile-4">Four columns</div>
+    <div class="mobile-4">Four columns</div>
+    <div class="mobile-4">Four columns</div>
+  </div>
+  <div class="row show-grid">
+    <div class="mobile-3">Three columns</div>
+    <div class="mobile-3">Three columns</div>
+    <div class="mobile-3">Three columns</div>
+    <div class="mobile-3">Three columns</div>
+  </div>
+  <div class="row show-grid">
+    <div class="mobile-6">Six columns</div>
+    <div class="mobile-6">Six columns</div>
+  </div>
+</div>
 </div>
 
 <h3>Tablet Grid</h3>
@@ -449,7 +462,7 @@
   <span class="nt">&lt;/form&gt;</span></code></pre></div>
 
           </div>
-          <div class="col3">
+          <div class="col2 sidebar-nav">
             
               <li>
 	<a href="#banner">Banner</a>
