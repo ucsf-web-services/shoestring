@@ -5,12 +5,14 @@ BASE
 $base-color       : #444;
 $base-font-family : 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $base-font-size   : 14px;
+$base-font-weight : 500;
 $base-line-height : 24px;
 $base-spacing-unit: $base-line-height;
 $base-ui-color    : #BFBFBF;
 $base-radius: 5px;
 $base-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 $grid-gutter-width: 30px;
+
 
 /*------------------------------------*\
 UI ELEMENTS
@@ -28,6 +30,7 @@ $purple: #716FB2;
 $red: #EC1848;
 $yellow: #FFDD00;
 $electric-blue: #007CBE;
+$light-blue: $electric-blue;
 
 $gray-pillar: #4d4d4d;
 $gray--dark: #4d4d4d;
@@ -156,3 +159,9 @@ $BUTTONS
 $button-padding            : 0.6em 1.2em;
 $button-padding-desktop    : 0.6em 1.2em;
 $button-border-radius      : $base-radius;
+
+/*------------------------------------*\
+$HEADINGS
+\*------------------------------------*/
+$headings-color:          inherit;
+$headings-small-color:    $gray--light;
