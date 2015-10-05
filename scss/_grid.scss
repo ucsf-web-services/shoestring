@@ -8,7 +8,15 @@
 	padding-right: 15px;
     padding-left: 15px;
     position: relative;
-    min-height: 1px
+    min-height: 1px;
+}
+
+.mobile-1, .mobile-2, .mobile-3, .mobile-4, .mobile-5, .mobile-6, .mobile-7, .mobile-8, .mobile-9, .mobile-10, .mobile-11, .mobile-12 {
+	float: left;
+	padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+    min-height: 1px;
 }
 
 .row {
@@ -19,6 +27,15 @@
 
 @for $i from 1 through $grid-columns {
 	.col#{convert-number-to-word($i)}{
+		width: gridCalc($i, $grid-columns);
+		@media screen and(max-width: $width-medium){
+    		width: 100%;
+  		}
+	}
+}
+
+@for $i from 1 through $grid-columns {
+	.mobile-#{convert-number-to-word($i)}{
 		width: gridCalc($i, $grid-columns);
 	}
 }
