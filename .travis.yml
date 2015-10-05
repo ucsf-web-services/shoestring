@@ -1,8 +1,10 @@
 language: node_js
 node_js:
   - "0.12"
-
-
+env:
+	global:
+		- JEKYLL_VERSION="2.5.3"
+    - SAUCE_USERNAME="shoestring"
 # before_install:
 #   - rvm install 2.0.0
 #   - rvm use 2.0.0 --fuzzy
