@@ -550,6 +550,13 @@ $BUTTONS
   position: relative;
   min-height: 1px; }
 
+.mobile-1, .mobile-2, .mobile-3, .mobile-4, .mobile-5, .mobile-6, .mobile-7, .mobile-8, .mobile-9, .mobile-10, .mobile-11, .mobile-12 {
+  float: left;
+  padding-right: 15px;
+  padding-left: 15px;
+  position: relative;
+  min-height: 1px; }
+
 .row {
   margin-left: 15px;
   margin-right: 15px; }
@@ -560,38 +567,110 @@ $BUTTONS
 
 .col1 {
   width: 8.33333%; }
+  @media screen and (max-width: 768px) {
+    .col1 {
+      width: 100%; } }
 
 .col2 {
   width: 16.66667%; }
+  @media screen and (max-width: 768px) {
+    .col2 {
+      width: 100%; } }
 
 .col3 {
   width: 25%; }
+  @media screen and (max-width: 768px) {
+    .col3 {
+      width: 100%; } }
 
 .col4 {
   width: 33.33333%; }
+  @media screen and (max-width: 768px) {
+    .col4 {
+      width: 100%; } }
 
 .col5 {
   width: 41.66667%; }
+  @media screen and (max-width: 768px) {
+    .col5 {
+      width: 100%; } }
 
 .col6 {
   width: 50%; }
+  @media screen and (max-width: 768px) {
+    .col6 {
+      width: 100%; } }
 
 .col7 {
   width: 58.33333%; }
+  @media screen and (max-width: 768px) {
+    .col7 {
+      width: 100%; } }
 
 .col8 {
   width: 66.66667%; }
+  @media screen and (max-width: 768px) {
+    .col8 {
+      width: 100%; } }
 
 .col9 {
   width: 75%; }
+  @media screen and (max-width: 768px) {
+    .col9 {
+      width: 100%; } }
 
 .col10 {
   width: 83.33333%; }
+  @media screen and (max-width: 768px) {
+    .col10 {
+      width: 100%; } }
 
 .col11 {
   width: 91.66667%; }
+  @media screen and (max-width: 768px) {
+    .col11 {
+      width: 100%; } }
 
 .col12 {
+  width: 100%; }
+  @media screen and (max-width: 768px) {
+    .col12 {
+      width: 100%; } }
+
+.mobile-1 {
+  width: 8.33333%; }
+
+.mobile-2 {
+  width: 16.66667%; }
+
+.mobile-3 {
+  width: 25%; }
+
+.mobile-4 {
+  width: 33.33333%; }
+
+.mobile-5 {
+  width: 41.66667%; }
+
+.mobile-6 {
+  width: 50%; }
+
+.mobile-7 {
+  width: 58.33333%; }
+
+.mobile-8 {
+  width: 66.66667%; }
+
+.mobile-9 {
+  width: 75%; }
+
+.mobile-10 {
+  width: 83.33333%; }
+
+.mobile-11 {
+  width: 91.66667%; }
+
+.mobile-12 {
   width: 100%; }
 
 /*------------------------------------*\

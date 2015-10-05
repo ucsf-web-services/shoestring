@@ -122,6 +122,13 @@ Grid
   border: 1px solid #58BFC6;
 }
 
+.show-grid [class^=mobile]{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: #E8F6F7;
+  border: 1px solid #58BFC6;
+}
+
 /*
 
 Sidebar
