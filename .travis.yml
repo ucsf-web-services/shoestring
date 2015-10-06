@@ -2,10 +2,9 @@ language: node_js
 node_js:
   - "0.12"
 before_install:
-  - rvm use 2.0.0 --fuzzy
-install:
   - npm install -g gulp
-  - rvm install ruby-2.0.0-p598
+script: gulp
+install: ./installer.sh
 env:
   global:
     - JEKYLL_VERSION="2.5.3"
@@ -14,6 +13,5 @@ env:
     - secure: "KEBu4gm/uaUw4TN7lpYCrM9l1ddelv+OLknOIiKhVOzQGzgs5F0/QhPfx8r/VTkkcHhmU+YPJGD7ECPZxyX07wYH6G2XbaPT2B1HKSA9x5ZFTHYVKIgxzJ64KMsNKipmlmDEOoaNjPPiWhSQaSrEDHdGECasr5qDMtvOIQBk0FI="
 addons:
   sauce_connect: true
-
 notifications:
   slack: ucsfit:zV8MLFrNMfsSSHXP4WkXWL6J
