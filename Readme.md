@@ -1,5 +1,6 @@
-# Shoestring  [![Build Status](https://travis-ci.org/ucsf-web-services/shoestring.svg?branch=master)](https://travis-ci.org/ucsf-web-services/shoestring)[![Sauce Test Status](https://saucelabs.com/buildstatus/shoestring)](https://saucelabs.com/u/shoestring)
+# Shoestring  [![Build Status](https://travis-ci.org/ucsf-web-services/shoestring.svg?branch=master)](https://travis-ci.org/ucsf-web-services/shoestring)
 
+[![Sauce Test Status](https://saucelabs.com/browser-matrix/shoestring.svg)](https://saucelabs.com/u/shoestring)
 
 [http://ucsf-web-services.github.io/shoestring](http://ucsf-web-services.github.io/shoestring)
 
