@@ -1,3 +1,4 @@
+sudo: false
 language: node_js
 node_js:
   - "0.12"
@@ -8,10 +9,13 @@ install: ./installer.sh
 env:
   global:
     - JEKYLL_VERSION="2.5.3"
-    - SAUCE_USERNAME="shoestring"
-    - secure: "aFS2i4TS/xjcFVxQxYHSDAtEn59XuYs0icjiX42JfNUeRusLMlD6vGze58Fk3k83cEXhyZ5MWXaIkE7T5nxZ6DdI5bGBPuLJPK0IeWcCDPlu8P3X0U+tl9PpYJ/x9MsN8m2PMFOVneZsplNTLl1E0E+iXkAaSvcL6a/x0/4auuQ="
-    - secure: "KEBu4gm/uaUw4TN7lpYCrM9l1ddelv+OLknOIiKhVOzQGzgs5F0/QhPfx8r/VTkkcHhmU+YPJGD7ECPZxyX07wYH6G2XbaPT2B1HKSA9x5ZFTHYVKIgxzJ64KMsNKipmlmDEOoaNjPPiWhSQaSrEDHdGECasr5qDMtvOIQBk0FI="
 addons:
-  sauce_connect: true
+  sauce_connect:
+    username: "shoestring"
+    access_key: 
+      secure: "aFS2i4TS/xjcFVxQxYHSDAtEn59XuYs0icjiX42JfNUeRusLMlD6vGze58Fk3k83cEXhyZ5MWXaIkE7T5nxZ6DdI5bGBPuLJPK0IeWcCDPlu8P3X0U+tl9PpYJ/x9MsN8m2PMFOVneZsplNTLl1E0E+iXkAaSvcL6a/x0/4auuQ="  
+      secure: "KEBu4gm/uaUw4TN7lpYCrM9l1ddelv+OLknOIiKhVOzQGzgs5F0/QhPfx8r/VTkkcHhmU+YPJGD7ECPZxyX07wYH6G2XbaPT2B1HKSA9x5ZFTHYVKIgxzJ64KMsNKipmlmDEOoaNjPPiWhSQaSrEDHdGECasr5qDMtvOIQBk0FI="
+matrix:
+  fast_finish: true
 notifications:
   slack: ucsfit:zV8MLFrNMfsSSHXP4WkXWL6J

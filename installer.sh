@@ -85,4 +85,3 @@ echo -e "\033[34mHere weeee gooooo...\033[0m"
 
 npm install
 bundle install
-gulp
