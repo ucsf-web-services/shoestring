@@ -9,6 +9,7 @@ var gulp        = require("gulp"),
     merge       = require("merge-stream"),
     reload      = browserSync.reload,
     pkg         = require('./package.json'),
+    Server = require('karma').Server,
     bs;
 
 // UTILITIES //
@@ -160,6 +161,13 @@ gulp.task("serve:prod", function () {
       baseDir: "_gh_pages"
     }
   });
+});
+
+gulp.task('test', function(done) {
+  new Server({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true
+  }, done).start();
 });
 
 // Watch for changes 
