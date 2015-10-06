@@ -16,8 +16,5 @@ module.exports = function(config) {
 			'karma-jasmine',
 			'karma-chrome-launcher'
 		]
-		//browsers: ['Chrome'],
-		//frameworks: ['jasmin'],
-		
 	});
 };
