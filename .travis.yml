@@ -4,7 +4,7 @@ node_js:
   - "0.12"
 before_install:
   - npm install -g gulp
-script: gulp
+script: gulp remote-test
 install: ./installer.sh
 env:
   global:
