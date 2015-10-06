@@ -1,6 +1,7 @@
 module.exports = function(config) {
+	var sauceLabsBrowsers = require('./browsers').browsers
+	var browsers = ['Chrome']
 	config.set({
-
 		basePath: '',
 		frameworks: ['jasmine'],
 		files: [
@@ -11,10 +12,17 @@ module.exports = function(config) {
 		colors: true,
 		sauceLabs: {
 			username: 'shoestring',
+			build: 'TRAVIS #' + process.env.TRAVIS_BUILD_NUMBER + ' (' + process.env.TRAVIS_BUILD_ID + ')',
+      		tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
+      		startConnect: true,
+      		recordVideo: false,
+      		recordScreenshots: false
 		},
-		plugins: [
+		browsers: browsers,
+		plugins: [	
 			'karma-jasmine',
 			'karma-chrome-launcher'
 		]
+		// customLaunchers: sauceLabsBrowsers
 	});
 };
