@@ -9,7 +9,7 @@ var gulp        = require("gulp"),
     merge       = require("merge-stream"),
     reload      = browserSync.reload,
     pkg         = require('./package.json'),
-    Server = require('karma').Server,
+  Server      = require('karma').Server,
     bs;
 
 // UTILITIES //
@@ -166,8 +166,14 @@ gulp.task("serve:prod", function () {
 gulp.task('test', function(done) {
   new Server({
     configFile: __dirname + '/karma.conf.js',
-    singleRun: true
   }, done).start();
+});
+
+gulp.task('remote-test', function(done) {
+  karma.start({
+    configFile: __dirname + '/karma.conf.js',
+    singleRun: true,
+  }, done);
 });
 
 // Watch for changes 
