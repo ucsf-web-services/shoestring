@@ -18,4 +18,4 @@ addons:
 matrix:
   fast_finish: true
 notifications:
-  slack: ucsfit:zV8MLFrNMfsSSHXP4WkXWL6J
+  slack: ucdev:dxbMRC6vbL5loCPAGyJ3rjRi
