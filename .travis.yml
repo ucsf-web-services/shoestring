@@ -5,6 +5,7 @@ before_install:
   - rvm use 2.0.0 --fuzzy
 install:
   - npm install -g gulp
+  - rvm install ruby-2.0.0-p598
 env:
   global:
     - JEKYLL_VERSION="2.5.3"
