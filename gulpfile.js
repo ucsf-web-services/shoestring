@@ -170,10 +170,10 @@ gulp.task('test', function(done) {
 });
 
 gulp.task('remote-test', function(done) {
-  karma.start({
+  new Server({
     configFile: __dirname + '/karma.conf.js',
     singleRun: true,
-  }, done);
+  }, done).start();
 });
 
 // Watch for changes 
