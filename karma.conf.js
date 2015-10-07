@@ -11,18 +11,17 @@ module.exports = function(config) {
 		reporters: ['progress'],
 		colors: true,
 		sauceLabs: {
-			username: 'shoestring',
 			build: 'TRAVIS #' + process.env.TRAVIS_BUILD_NUMBER + ' (' + process.env.TRAVIS_BUILD_ID + ')',
       		tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
       		startConnect: true,
       		recordVideo: false,
       		recordScreenshots: false
 		},
-		browsers: browsers,
 		plugins: [	
 			'karma-jasmine',
 			'karma-chrome-launcher'
-		]
-		// customLaunchers: sauceLabsBrowsers
+		],
+		customLaunchers: sauceLabsBrowsers,
+		browsers: ['Chrome']
 	});
 };
