@@ -4,7 +4,6 @@ node_js:
   - "0.12"
 before_install:
   - npm install -g gulp
-script: gulp test
 install: ./installer.sh
 addons:
   sauce_connect:
@@ -16,3 +15,4 @@ matrix:
   fast_finish: true
 notifications:
   slack: ucdev:dxbMRC6vbL5loCPAGyJ3rjRi
+script: gulp test

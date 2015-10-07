@@ -172,12 +172,12 @@ gulp.task('test', function(done) {
   }, done);
 });
 
-// gulp.task('remote-test', function(done) {
-//   karma.start({
-//     configFile: __dirname + '/karma.conf-sauce.js',
-//     singleRun: isTravis
-//   }, done);
-// });
+gulp.task('remote-test', function(done) {
+  karma.start({
+    configFile: __dirname + '/karma.conf-sauce.js',
+    singleRun: isTravis
+  }, done);
+});
 
 // Watch for changes 
 gulp.task("watch", function () {
