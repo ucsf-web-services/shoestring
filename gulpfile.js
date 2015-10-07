@@ -9,7 +9,8 @@ var gulp        = require("gulp"),
     merge       = require("merge-stream"),
     reload      = browserSync.reload,
     pkg         = require('./package.json'),
-  Server      = require('karma').Server,
+    karma       = require('karma').Server,
+    isTravis    = process.env.TRAVIS || false,
     bs;
 
 // UTILITIES //
@@ -164,17 +165,19 @@ gulp.task("serve:prod", function () {
 });
 
 gulp.task('test', function(done) {
-  new Server({
+  console.log('isTravis', isTravis);
+  karma.start({
     configFile: __dirname + '/karma.conf.js',
-  }, done).start();
+    singleRun: isTravis
+  }, done);
 });
 
-gulp.task('remote-test', function(done) {
-  new Server({
-    configFile: __dirname + '/karma.conf-sauce.js',
-    singleRun: true,
-  }, done).start();
-});
+// gulp.task('remote-test', function(done) {
+//   karma.start({
+//     configFile: __dirname + '/karma.conf-sauce.js',
+//     singleRun: isTravis
+//   }, done);
+// });
 
 // Watch for changes 
 gulp.task("watch", function () {
