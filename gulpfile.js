@@ -171,7 +171,7 @@ gulp.task('test', function(done) {
 
 gulp.task('remote-test', function(done) {
   new Server({
-    configFile: __dirname + '/karma.conf.js',
+    configFile: __dirname + '/karma.conf-sauce.js',
     singleRun: true,
   }, done).start();
 });
