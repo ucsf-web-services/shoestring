@@ -10,6 +10,7 @@ var gulp        = require("gulp"),
     reload      = browserSync.reload,
     pkg         = require('./package.json'),
     karma       = require('karma').Server,
+    _ = require('lodash'),
     karmaCommonConf  = require('./karma.conf-sauce.js'),
     isTravis    = process.env.TRAVIS || false,
     bs;
