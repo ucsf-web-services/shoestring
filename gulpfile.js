@@ -10,7 +10,7 @@ var gulp        = require("gulp"),
     reload      = browserSync.reload,
     pkg         = require('./package.json'),
     _           = require('lodash'),
-    karma       = require('karma').server,
+    karma       = require('karma').Server,
     karmaCommonConf  = require('./karma.conf-sauce.js'),
     isTravis    = process.env.TRAVIS || false,
     bs;
@@ -176,7 +176,7 @@ gulp.task('test', function(done) {
 
 gulp.task('remote-test', function(done) {
   karma.start(_.assign({}, karmaCommonConf, {
-    singleRun: isTravis
+    singleRun: true
   }), done);
 });
 // configFile: __dirname + '/karma.conf-sauce.js',
