@@ -20,8 +20,8 @@
 // 	});
 // };
 
-var karmaCommonConf = {
-	customLaunchers : {
+module.exports = function(config) {
+	var customLaunchers = {
 	
 		/* WINDOWS BROWSERS */
 
@@ -111,19 +111,26 @@ var karmaCommonConf = {
 			browserName: 'firefox',
 			platform: 'Linux'
 		}
-	},
-	sauceLabs: {
-		build: 'TRAVIS #' + process.env.TRAVIS_BUILD_NUMBER + ' (' + process.env.TRAVIS_BUILD_ID + ')',
-  		tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
-  		startConnect: false,
-  		recordVideo: false,
-  		recordScreenshots: false
-	},
-	browsers: ['sl_firefox_osx'],
-	frameworks: ['jasmine'],
-	files: [
-	'js/test/vendor/jquery-1.11.3.min.js',
-	'js/test/*.js'
-	],
-	logLevel: 'LOG_INFO'
+	};
+	config.set({
+		sauceLabs: {
+			username: process.env.SAUCE_USER,
+	      	accessKey: process.env.SAUCE_ACCESS_KEY,
+			build: 'TRAVIS #' + process.env.TRAVIS_BUILD_NUMBER + ' (' + process.env.TRAVIS_BUILD_ID + ')',
+	  		tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
+	  		testName: "Shoestring Tests",
+	  		startConnect: false,
+	  		recordVideo: false,
+	  		recordScreenshots: false
+		},
+		browsers: Object.keys(customLaunchers),
+		reporters: ['dots', 'saucelabs'],
+		frameworks: ['jasmine'],
+		singleRun: true,
+		files: [
+			'js/test/vendor/jquery-1.11.3.min.js',
+			'js/test/*.js'
+		],
+		logLevel: 'LOG_INFO'
+	});
 };
