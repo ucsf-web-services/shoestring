@@ -113,6 +113,12 @@ module.exports = function(config) {
 		}
 	};
 	config.set({
+		basePath: '',
+		frameworks: ['qunit'],
+		files: [
+			'js/test.js'
+		],
+		plugins: ['karma-qunit', 'karma-phantomjs-launcher', 'karma-sauce-launcher'],
 		sauceLabs: {
 			username: process.env.SAUCE_USER,
 	      	accessKey: process.env.SAUCE_ACCESS_KEY,
@@ -126,12 +132,7 @@ module.exports = function(config) {
 		browsers: Object.keys(customLaunchers),
 		customLaunchers: customLaunchers,
 		reporters: ['dots', 'saucelabs'],
-		frameworks: ['qunit'],
-		plugins: ['karma-qunit', 'karma-phantomjs-launcher'],
 		singleRun: true,
-		files: [
-			'js/test.js'
-		],
 		logLevel: 'LOG_INFO'
 	});
 };
