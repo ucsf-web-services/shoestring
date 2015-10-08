@@ -21,9 +21,14 @@
 // };
 
 module.exports = function(config) {
-	if (!process.env.SAUCE_USERNAME || !process.env.SAUCE_ACCESS_KEY) {
-	    console.log('Make sure the SAUCE_USERNAME and SAUCE_ACCESS_KEY environment variables are set.');
-	    process.exit(1);
+	if (!process.env.SAUCE_USERNAME) {
+		if (!fs.existsSync('sauce.json')) {
+		  console.log('Create a sauce.json with your credentials based on the sauce-sample.json file.');
+		  process.exit(1);
+		} else {
+		  process.env.SAUCE_USERNAME = require('./sauce').username;
+		  process.env.SAUCE_ACCESS_KEY = require('./sauce').accessKey;
+		}
   	}
 	var customLaunchers = {
 	
@@ -116,15 +121,6 @@ module.exports = function(config) {
 			platform: 'Linux'
 		}
 	};
-	if (!process.env.SAUCE_USERNAME) {
-		if (!fs.existsSync('sauce.json')) {
-		  console.log('Create a sauce.json with your credentials based on the sauce-sample.json file.');
-		  process.exit(1);
-		} else {
-		  process.env.SAUCE_USERNAME = require('./sauce').username;
-		  process.env.SAUCE_ACCESS_KEY = require('./sauce').accessKey;
-		}
-  	}
 	config.set({
 		basePath: '',
 		frameworks: ['qunit'],
@@ -133,8 +129,8 @@ module.exports = function(config) {
 		],
 		plugins: ['karma-qunit', 'karma-phantomjs-launcher', 'karma-sauce-launcher'],
 		sauceLabs: {
-			username: process.env.SAUCE_USER,
-	      	accessKey: process.env.SAUCE_ACCESS_KEY,
+			// username: process.env.SAUCE_USER,
+	  //     	accessKey: process.env.SAUCE_ACCESS_KEY,
 			build: 'TRAVIS #' + process.env.TRAVIS_BUILD_NUMBER + ' (' + process.env.TRAVIS_BUILD_ID + ')',
 	  		tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
 	  		testName: "Shoestring Tests",
