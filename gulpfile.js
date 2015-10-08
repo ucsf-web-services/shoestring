@@ -12,9 +12,11 @@ var gulp        = require("gulp"),
     _           = require('lodash'),
     karma       = require('karma').Server,
     karmaCommonConf  = require('./karma.conf-sauce.js'),
+    karmaLocalConf   = __dirname + '/karma.conf.js',
     isTravis    = process.env.TRAVIS || false,
+    Server      = require('karma').Server,
     bs;
-
+    
 // UTILITIES //
 // Checks for erros with jekyll and url errors
 gulp.task("doctor", $.shell.task("jekyll doctor"));
@@ -167,11 +169,10 @@ gulp.task("serve:prod", function () {
 });
 
 gulp.task('test', function(done) {
-  console.log('isTravis', isTravis);
-  karma.start({
-    configFile: __dirname + '/karma.conf.js',
-    singleRun: isTravis
-  }, done);
+  new Server({
+    configFile: karmaLocalConf, 
+    singleRun: false
+  }, done).start();
 });
 
 gulp.task('remote-test', function(done) {

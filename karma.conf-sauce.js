@@ -124,13 +124,13 @@ module.exports = function(config) {
 	  		recordScreenshots: false
 		},
 		browsers: Object.keys(customLaunchers),
+		customLaunchers: customLaunchers,
 		reporters: ['dots', 'saucelabs'],
-		frameworks: ['jasmine'],
+		frameworks: ['qunit'],
+		plugins: ['karma-qunit', 'karma-phantomjs-launcher'],
 		singleRun: true,
 		files: [
-			'js/test/vendor/jquery-1.11.3.min.js',
-			'js/*.js',
-			'js/test/*.js'
+			'js/test.js'
 		],
 		logLevel: 'LOG_INFO'
 	});
