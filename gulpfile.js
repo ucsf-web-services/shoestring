@@ -175,13 +175,11 @@ gulp.task('test', function(done) {
 });
 
 gulp.task('remote-test', function(done) {
-  karma.start({
-    _.assign({}, karmaCommonConf, {
-    // configFile: __dirname + '/karma.conf-sauce.js',
+  karma.start(_.assign({}, karmaCommonConf, {
     singleRun: isTravis
   }), done);
 });
-
+// configFile: __dirname + '/karma.conf-sauce.js',
 // Watch for changes 
 gulp.task("watch", function () {
   gulp.watch(["docs/**/*.md", "docs/*.html", "docs/**/*.html", "docs/**/*.xml", "docs/**/*.txt", "docs/**/*.js", "docs/**/*.css"], ["jekyll-rebuild"]);
