@@ -122,7 +122,7 @@ var karmaCommonConf = {
 	browsers: ['sl_firefox_osx'],
 	frameworks: ['jasmine'],
 	files: [
-	'js/test/vendor/jquery-1.11.3.min.js'
+	'js/test/vendor/jquery-1.11.3.min.js',
 	'js/test/*.js'
 	],
 	logLevel: 'LOG_INFO'
