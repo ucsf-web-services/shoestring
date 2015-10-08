@@ -15,5 +15,5 @@ matrix:
   fast_finish: true
 notifications:
   slack: ucdev:dxbMRC6vbL5loCPAGyJ3rjRi
-script: gulp remote-test
+script: karma start karma-conf-sauce.js
 sudo: false
