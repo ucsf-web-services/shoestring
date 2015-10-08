@@ -19,7 +19,7 @@
 // 		browsers: Object.keys(sauceLabsBrowsers)
 // 	});
 // };
-
+var fs = require('fs');
 module.exports = function(config) {
 	if (!process.env.SAUCE_USERNAME) {
 		if (!fs.existsSync('sauce.json')) {
