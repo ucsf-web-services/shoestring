@@ -1,6 +1,6 @@
 module.exports = function(config) {
 	var sauceLabsBrowsers = require('./browsers').browsers
-	var browsers = [
+	var customLaunchers = [
 	
 		/* WINDOWS BROWSERS */
 
@@ -91,9 +91,8 @@ module.exports = function(config) {
 			platform: 'Linux'
 		},
 	]
-	
+
 	config.set({
-		basePath: '',
 		frameworks: ['jasmine'],
 		files: [
 			'js/test/vendor/jquery-1.11.3.min.js',
@@ -108,10 +107,6 @@ module.exports = function(config) {
       		recordVideo: false,
       		recordScreenshots: false
 		},
-		plugins: [	
-			'karma-jasmine',
-			'karma-chrome-launcher'
-		],
 		customLaunchers: sauceLabsBrowsers,
 		browsers: Object.keys(browsers)
 	});
