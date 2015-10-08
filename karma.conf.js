@@ -22,6 +22,6 @@ module.exports = function(config) {
 			'karma-chrome-launcher'
 		],
 		customLaunchers: sauceLabsBrowsers,
-		browsers: ['Chrome']
+		browsers: Object.keys(sauceLabsBrowsers)
 	});
 };
