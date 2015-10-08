@@ -108,6 +108,6 @@ module.exports = function(config) {
       		recordScreenshots: false
 		},
 		customLaunchers: sauceLabsBrowsers,
-		browsers: Object.keys(browsers)
+		browsers: Object.keys(customLaunchers)
 	});
 };
