@@ -6,16 +6,15 @@ before_install:
 install: 
   - ./installer.sh
 addons:
-  sauce_connect:
-    username: "shoestring"
-    access_key:
-      secure: "aFS2i4TS/xjcFVxQxYHSDAtEn59XuYs0icjiX42JfNUeRusLMlD6vGze58Fk3k83cEXhyZ5MWXaIkE7T5nxZ6DdI5bGBPuLJPK0IeWcCDPlu8P3X0U+tl9PpYJ/x9MsN8m2PMFOVneZsplNTLl1E0E+iXkAaSvcL6a/x0/4auuQ="  
-      secure: "KEBu4gm/uaUw4TN7lpYCrM9l1ddelv+OLknOIiKhVOzQGzgs5F0/QhPfx8r/VTkkcHhmU+YPJGD7ECPZxyX07wYH6G2XbaPT2B1HKSA9x5ZFTHYVKIgxzJ64KMsNKipmlmDEOoaNjPPiWhSQaSrEDHdGECasr5qDMtvOIQBk0FI="
-# env:
-#   global:
-#     - SAUCE_USERNAME="shoestring"
-#     - secure: "aFS2i4TS/xjcFVxQxYHSDAtEn59XuYs0icjiX42JfNUeRusLMlD6vGze58Fk3k83cEXhyZ5MWXaIkE7T5nxZ6DdI5bGBPuLJPK0IeWcCDPlu8P3X0U+tl9PpYJ/x9MsN8m2PMFOVneZsplNTLl1E0E+iXkAaSvcL6a/x0/4auuQ="  
-#     - secure: "KEBu4gm/uaUw4TN7lpYCrM9l1ddelv+OLknOIiKhVOzQGzgs5F0/QhPfx8r/VTkkcHhmU+YPJGD7ECPZxyX07wYH6G2XbaPT2B1HKSA9x5ZFTHYVKIgxzJ64KMsNKipmlmDEOoaNjPPiWhSQaSrEDHdGECasr5qDMtvOIQBk0FI="
+  sauce_connect: true
+    # username: "shoestring"
+    # access_key:
+    #   secure: "aFS2i4TS/xjcFVxQxYHSDAtEn59XuYs0icjiX42JfNUeRusLMlD6vGze58Fk3k83cEXhyZ5MWXaIkE7T5nxZ6DdI5bGBPuLJPK0IeWcCDPlu8P3X0U+tl9PpYJ/x9MsN8m2PMFOVneZsplNTLl1E0E+iXkAaSvcL6a/x0/4auuQ="  
+    #   secure: "KEBu4gm/uaUw4TN7lpYCrM9l1ddelv+OLknOIiKhVOzQGzgs5F0/QhPfx8r/VTkkcHhmU+YPJGD7ECPZxyX07wYH6G2XbaPT2B1HKSA9x5ZFTHYVKIgxzJ64KMsNKipmlmDEOoaNjPPiWhSQaSrEDHdGECasr5qDMtvOIQBk0FI="
+env:
+  global:
+    - secure: Q+HcdFoiuqAwGFrdrM/QjG3uYus/Fjcwrt4izjkaoOeDEmAq2TV0UF7IC0G2Y8+1iBByGKhSOAnl00DqD6oAXqq5ndoyKqxuS5AaqM6TLEkZ/iUaW6xh0UF2y/luBAOBRt1vYJ7KkuQyJAB/H4Emx4Lx1XhB5xfJeEZ/t0UdMC0=
+    - secure: UU/AuQcrg9NRKzZPUgvWbWwkKVYE/QbtymmTgyyvddKHAPBEdnQQ2NO2KjcJ756Mxh44+vqxNWAost0KNMUgynFnINNtpqCpUHnfJ1HQwSP8ryKiObJt/CiU/pnU2zS/88g3PHB9pLIXg5iNQohr5/0K/1ROUagONotaPsnapK8=
 matrix:
   fast_finish: true
 notifications:
