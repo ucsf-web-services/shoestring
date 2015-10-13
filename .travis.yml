@@ -12,9 +12,7 @@ install:
 addons:
   sauce_connect:
     username: "shoestring"
-    access_key:
-      - secure: "Q+HcdFoiuqAwGFrdrM/QjG3uYus/Fjcwrt4izjkaoOeDEmAq2TV0UF7IC0G2Y8+1iBByGKhSOAnl00DqD6oAXqq5ndoyKqxuS5AaqM6TLEkZ/iUaW6xh0UF2y/luBAOBRt1vYJ7KkuQyJAB/H4Emx4Lx1XhB5xfJeEZ/t0UdMC0="
-      - secure: "UU/AuQcrg9NRKzZPUgvWbWwkKVYE/QbtymmTgyyvddKHAPBEdnQQ2NO2KjcJ756Mxh44+vqxNWAost0KNMUgynFnINNtpqCpUHnfJ1HQwSP8ryKiObJt/CiU/pnU2zS/88g3PHB9pLIXg5iNQohr5/0K/1ROUagONotaPsnapK8="
+    access_key: "7a824d6d-0fca-4cb0-84cb-9d1d67f4d6bd"
 # env:
 #   global:
 matrix:
