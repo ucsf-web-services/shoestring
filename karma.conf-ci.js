@@ -122,9 +122,7 @@ module.exports = function(config) {
 		}
 	};
 	config.set({
-		basePath: '../',
-		username: process.env.SAUCE_USERNAME,
-        accessKey: process.env.SAUCE_ACCESS_KEY,
+		basePath: '',
 		frameworks: ['qunit'],
 		files: [
 			'js/test/test.js'
