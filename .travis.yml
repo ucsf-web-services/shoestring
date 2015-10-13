@@ -21,5 +21,5 @@ matrix:
   fast_finish: true
 notifications:
   slack: ucdev:dxbMRC6vbL5loCPAGyJ3rjRi
-script: karma start karma.conf-sauce.js
+script: karma start karma.conf-ci.js
 sudo: false
