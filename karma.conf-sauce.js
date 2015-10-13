@@ -21,6 +21,15 @@
 // };
 var fs = require('fs');
 module.exports = function(config) {
+	config.set(module.exports.conf);
+
+	if(process.env.TRAVIS) {
+		config.sauceUser = process.env.SAUCE_USERNAME;
+		config.sauceKey = process.env.SAUCE_ACCESS_KEY;
+	}
+}
+
+module.exports = function(config) {
 	var customLaunchers = {
 	
 		/* WINDOWS BROWSERS */
