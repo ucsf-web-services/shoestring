@@ -4,7 +4,7 @@ node_js:
 before_install:
   - npm install -g gulp
 install: 
-  - ./installer.sh
+  # - ./installer.sh
     # username: "shoestring"
     # access_key:
     #   secure: "aFS2i4TS/xjcFVxQxYHSDAtEn59XuYs0icjiX42JfNUeRusLMlD6vGze58Fk3k83cEXhyZ5MWXaIkE7T5nxZ6DdI5bGBPuLJPK0IeWcCDPlu8P3X0U+tl9PpYJ/x9MsN8m2PMFOVneZsplNTLl1E0E+iXkAaSvcL6a/x0/4auuQ="  
