@@ -129,8 +129,6 @@ module.exports = function(config) {
 		],
 		plugins: ['karma-qunit', 'karma-phantomjs-launcher', 'karma-sauce-launcher'],
 		sauceLabs: {
-			username: process.env.SAUCE_USERNAME,
-	      	accessKey: process.env.SAUCE_ACCESS_KEY,
 			build: 'TRAVIS #' + process.env.TRAVIS_BUILD_NUMBER + ' (' + process.env.TRAVIS_BUILD_ID + ')',
 	  		tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
 	  		testName: "Shoestring Tests",
