@@ -125,7 +125,7 @@ module.exports = function(config) {
 		basePath: '',
 		frameworks: ['qunit'],
 		files: [
-			'js/test/test.js'
+			'js/test/*.js'
 		],
 		plugins: ['karma-qunit', 'karma-phantomjs-launcher', 'karma-sauce-launcher'],
 		sauceLabs: {

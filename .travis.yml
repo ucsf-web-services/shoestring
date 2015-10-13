@@ -21,5 +21,6 @@ matrix:
   fast_finish: true
 notifications:
   slack: ucdev:dxbMRC6vbL5loCPAGyJ3rjRi
-script: karma start karma.conf-ci.js
+script: 
+  - '[ "${TRAVIS_PULL_REQUEST}" != "false"] || karma start karma.conf-ci.js'
 sudo: false
