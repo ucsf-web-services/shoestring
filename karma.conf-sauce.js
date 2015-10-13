@@ -122,7 +122,7 @@ module.exports = function(config) {
 		}
 	};
 	config.set({
-		basePath: '',
+		basePath: '../',
 		username: process.env.SAUCE_USERNAME,
         accessKey: process.env.SAUCE_ACCESS_KEY,
 		frameworks: ['qunit'],
@@ -130,7 +130,7 @@ module.exports = function(config) {
 			'js/test/test.js'
 		],
 		plugins: ['karma-qunit', 'karma-phantomjs-launcher', 'karma-sauce-launcher'],
-	sauceLabs: {
+		sauceLabs: {
 			build: 'TRAVIS #' + process.env.TRAVIS_BUILD_NUMBER + ' (' + process.env.TRAVIS_BUILD_ID + ')',
 	  		tunnelIdentifier: process.env.TRAVIS_JOB_NUMBER,
 	  		testName: "Shoestring Tests",
