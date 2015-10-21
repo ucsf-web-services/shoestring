@@ -1,4 +1,4 @@
-var browsers = [
+var browsers : {
 	
 	/* WINDOWS BROWSERS */
 
@@ -87,5 +87,5 @@ var browsers = [
 		base: 'SauceLabs',
 		browserName: 'firefox',
 		platform: 'Linux'
-	},
-]
+	}
+}

@@ -489,7 +489,8 @@ $HEADINGS
   margin-bottom: 0;
   text-align: center;
   vertical-align: middle;
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   cursor: pointer;
   background-image: none;
   border: 1px solid transparent;
@@ -696,7 +697,8 @@ input[type="search"] {
   border: 1px #BFBFBF solid;
   padding: 0.3em 1em;
   background: #FAFAFA;
-  transition: all 0.1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+          transition: all 0.1s ease-in;
   vertical-align: middle;
   outline: none;
   width: 100%; }

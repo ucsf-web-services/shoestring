@@ -9,9 +9,15 @@ var gulp        = require("gulp"),
     merge       = require("merge-stream"),
     reload      = browserSync.reload,
     pkg         = require('./package.json'),
-  Server      = require('karma').Server,
+    _           = require('lodash'),
+    karma       = require('karma').Server,
+    karmaCommonConf  = require('./karma.conf-ci.js'),
+    karmaLocalConf   = __dirname + '/karma.conf.js',
+    isTravis    = process.env.TRAVIS || false,
+    Server      = require('karma').Server,
+    fs = require('fs'),
     bs;
-
+    
 // UTILITIES //
 // Checks for erros with jekyll and url errors
 gulp.task("doctor", $.shell.task("jekyll doctor"));
@@ -165,17 +171,18 @@ gulp.task("serve:prod", function () {
 
 gulp.task('test', function(done) {
   new Server({
-    configFile: __dirname + '/karma.conf.js',
+    configFile: karmaLocalConf, 
+    singleRun: false
   }, done).start();
 });
 
 gulp.task('remote-test', function(done) {
   new Server({
-    configFile: __dirname + '/karma.conf.js',
-    singleRun: true,
-  }, done).start();
+    configFile: karmaCommonConf,
+    singleRun: true
+}, done).start();
 });
-
+// configFile: __dirname + '/karma.conf-sauce.js',
 // Watch for changes 
 gulp.task("watch", function () {
   gulp.watch(["docs/**/*.md", "docs/*.html", "docs/**/*.html", "docs/**/*.xml", "docs/**/*.txt", "docs/**/*.js", "docs/**/*.css"], ["jekyll-rebuild"]);
