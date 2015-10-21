@@ -11,7 +11,7 @@ var gulp        = require("gulp"),
     pkg         = require('./package.json'),
     _           = require('lodash'),
     karma       = require('karma').Server,
-    karmaCommonConf  = require('./karma.conf-sauce.js'),
+    karmaCommonConf  = require('./karma.conf-ci.js'),
     karmaLocalConf   = __dirname + '/karma.conf.js',
     isTravis    = process.env.TRAVIS || false,
     Server      = require('karma').Server,
@@ -180,7 +180,7 @@ gulp.task('remote-test', function(done) {
   new Server({
     configFile: karmaCommonConf,
     singleRun: true
-}, done).startdone);
+}, done).start();
 });
 // configFile: __dirname + '/karma.conf-sauce.js',
 // Watch for changes 
