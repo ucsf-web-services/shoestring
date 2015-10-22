@@ -506,6 +506,8 @@ $HEADINGS
     text-decoration: none; }
   .btn:active, .btn:focus {
     outline: none; }
+  .btn a {
+    text-decoration: none; }
 
 /* Button Sizes */
 .btn-xs {
