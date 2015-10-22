@@ -352,6 +352,9 @@ $FORMS
 $BUTTONS
 \*------------------------------------*/
 /*------------------------------------*\
+$HEADINGS
+\*------------------------------------*/
+/*------------------------------------*\
     ACCORDION.CSS
 \*------------------------------------*/
 .accordion__header:after {
@@ -486,7 +489,8 @@ $BUTTONS
   margin-bottom: 0;
   text-align: center;
   vertical-align: middle;
-  touch-action: manipulation;
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
   cursor: pointer;
   background-image: none;
   border: 1px solid transparent;
@@ -502,6 +506,8 @@ $BUTTONS
     text-decoration: none; }
   .btn:active, .btn:focus {
     outline: none; }
+  .btn a {
+    text-decoration: none; }
 
 /* Button Sizes */
 .btn-xs {
@@ -693,7 +699,8 @@ input[type="search"] {
   border: 1px #BFBFBF solid;
   padding: 0.3em 1em;
   background: #FAFAFA;
-  transition: all 0.1s ease-in;
+  -webkit-transition: all 0.1s ease-in;
+          transition: all 0.1s ease-in;
   vertical-align: middle;
   outline: none;
   width: 100%; }
@@ -977,3 +984,60 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p, li, a {
   h1 small, h1 .small, h2 small, h2 .small, h3 small, h3 .small, h4 small, h4 .small, h5 small, h5 .small, h6 small, h6 .small, .h1 small, .h1 .small, .h2 small, .h2 .small, .h3 small, .h3 .small, .h4 small, .h4 .small, .h5 small, .h5 .small, .h6 small, .h6 .small, p small, p .small, li small, li .small, a small, a .small {
     font-weight: normal;
     line-height: 1; }
+
+/*------------------------------------*\
+    TABLES.CSS
+\*------------------------------------*/
+/**
+ * Table
+ */
+table {
+  width: 100%;
+  /* Caption */ }
+  table caption {
+    font-style: italic; }
+
+/**
+ * Default table
+ */
+.table td, .table th {
+  border-bottom: 1px #BFBFBF solid; }
+.table tr:hover > td {
+  background: #989898; }
+
+/**
+ * Bordered table
+ */
+.table--bordered thead th {
+  background: #007CBE;
+  color: #fff;
+  border-color: #007CBE;
+  font-weight: 600; }
+  .table--bordered thead th:first-child {
+    border-top-left-radius: 5px; }
+  .table--bordered thead th:last-child {
+    border-top-right-radius: 5px; }
+.table--bordered td, .table--bordered th {
+  border: 1px #BFBFBF solid; }
+
+th, td {
+  padding: 6px;
+  text-align: left; }
+
+@media screen and (min-width: 480px) {
+  th, td {
+    padding: 12px; } }
+
+/**
+ * Simple table
+ */
+.table--simple td, .table--simple th {
+  border-bottom: 1px #BFBFBF solid; }
+.table--simple tr:hover > td {
+  background: #989898; }
+
+/**
+ * Zebra table
+ */
+.table--zebra tr:nth-child(even) {
+  background: #989898; }
