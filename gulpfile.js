@@ -132,7 +132,8 @@ gulp.task("html", ["styles:prod"], function () {
 // Not that you can without ssh access to master repo anyway. Don't change either way.
 var options = { 
   remoteUrl: 'git@github.com:ucsf-web-services/shoestring.git',
-  branch: 'gh-pages'};
+  branch: 'gh-pages'
+};
 
 gulp.task('deploy', function() {
   return gulp.src("./_gh_pages/**/*")
@@ -186,7 +187,7 @@ gulp.task('remote-test', function(done) {
   new Server({
     configFile: karmaCommonConf,
     singleRun: true
-}, done).start();
+  }, done).start();
 });
 // configFile: __dirname + '/karma.conf-sauce.js',
 // Watch for changes 
