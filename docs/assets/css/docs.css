@@ -143,3 +143,16 @@ Sidebar
 .sidebar-nav li a{
   text-decoration: none;
 }
+
+
+/*
+
+Code Examples
+
+*/
+
+code {
+  background-color: #f9f2f4;
+  color: #EC1848;
+  padding: 5px;
+}
