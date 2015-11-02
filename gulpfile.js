@@ -176,6 +176,12 @@ gulp.task('test', function(done) {
   }, done).start();
 });
 
+gulp.task('zip', function() {
+  return gulp.src('dist/**/*')
+    .pipe($.zip('shoestring.zip'))
+    .pipe(gulp.dest(''));
+});
+
 gulp.task('remote-test', function(done) {
   new Server({
     configFile: karmaCommonConf,
