@@ -173,4 +173,7 @@ code {
   background-color: #F6F6F6;
   color: #EC1848;
   padding: 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }

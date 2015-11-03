@@ -15,6 +15,18 @@
     }
 }
 
+.clearfix {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
 @function gridCalc($colNumber, $grid-columns) {
     @return percentage($colNumber / $grid-columns);
 }
