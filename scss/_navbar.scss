@@ -18,7 +18,9 @@
 }
 
 .navbar {
-  height: 50px;
+  min-height: 40px;
+  position: relative;
+  border: 1px solid transparent;
 }
 
 .icon-bar {
