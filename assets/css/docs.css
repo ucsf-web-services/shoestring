@@ -135,11 +135,45 @@ Sidebar
 
 */
 
+.sidebar-nav {
+  position: fixed;
+  top: 40px;
+  right: 0;
+}
+
+.sidebar-nav ul {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-padding-start: 0;
+}
+
 .sidebar-nav li{
   text-decoration: none;
   list-style-type: none;
+  font-style: normal;
+  font-size: 13px;
+  letter-spacing: .01em;
+  line-height: 1.667em;
+  -webkit-font-smoothing: antialiased;
 }
 
 .sidebar-nav li a{
   text-decoration: none;
+  color: #0F2049;
+}
+
+
+/*
+
+Code Examples
+
+*/
+
+code {
+  background-color: #F6F6F6;
+  color: #EC1848;
+  padding: 5px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }

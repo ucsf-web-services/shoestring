@@ -317,6 +317,12 @@ table {
 td, th {
   padding: 0; }
 
+.clearfix:before, .clearfix:after {
+  content: " ";
+  display: table; }
+.clearfix:after {
+  clear: both; }
+
 /*------------------------------------*\
 BASE
 \*------------------------------------*/
@@ -979,11 +985,45 @@ fieldset {
 [role="button"] {
   cursor: pointer; }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6, p, li, a {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; }
-  h1 small, h1 .small, h2 small, h2 .small, h3 small, h3 .small, h4 small, h4 .small, h5 small, h5 .small, h6 small, h6 .small, .h1 small, .h1 .small, .h2 small, .h2 .small, .h3 small, .h3 .small, .h4 small, .h4 .small, .h5 small, .h5 .small, .h6 small, .h6 .small, p small, p .small, li small, li .small, a small, a .small {
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: inherit;
+  line-height: 24px; }
+  h1 .small, h2 .small, h3 .small, h4 .small, h5 .small, h6 .small, .h1 .small, .h2 .small, .h3 .small, .h4 .small, .h5 .small, .h6 .small {
     font-weight: normal;
-    line-height: 1; }
+    line-height: 1;
+    color: #989898; }
+
+h1, .h1 {
+  font-size: 24px;
+  font-weight: 400; }
+
+h2, .h2 {
+  font-size: 24px;
+  font-weight: 400; }
+
+h3, .h3 {
+  font-size: 24px;
+  font-weight: 400; }
+
+h4, .h4 {
+  font-size: 24px;
+  font-weight: 400; }
+
+h5, .h5 {
+  font-size: 24px;
+  font-weight: 400; }
+
+h6, .h6 {
+  font-size: 24px;
+  font-weight: 400; }
+
+* {
+  -webkit-margin-before: 0em;
+  -webkit-margin-after: 0em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px; }
 
 /*------------------------------------*\
     TABLES.CSS
