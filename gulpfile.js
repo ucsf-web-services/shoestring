@@ -1,4 +1,4 @@
-// TODO 
+// TODO
 // - Saucelabs Automated testing on build
 "use strict";
 var gulp        = require("gulp"),
@@ -15,9 +15,10 @@ var gulp        = require("gulp"),
     karmaLocalConf   = __dirname + '/karma.conf.js',
     isTravis    = process.env.TRAVIS || false,
     Server      = require('karma').Server,
+    args        = require('yargs').argv,
     fs = require('fs'),
     bs;
-    
+
 // UTILITIES //
 // Checks for erros with jekyll and url errors
 gulp.task("doctor", $.shell.task("jekyll doctor"));
@@ -33,8 +34,8 @@ gulp.task("jekyll-rebuild", ["jekyll:dev"], function () {
   reload;
 });
 
-gulp.task("jekyll:prod", $.shell.task("jekyll build --config _config.build.yml")); // took _config.yml, out 
-  
+gulp.task("jekyll:prod", $.shell.task("jekyll build --config _config.build.yml")); // took _config.yml, out
+
 // Compiles the SASS files and moves them into the "dist and server" directory
 gulp.task("styles:dev", function () {
   // Looks at the style.scss file for what to include and creates a style.css file
@@ -67,7 +68,7 @@ gulp.task("styles:prod", function () {
     // Injects the CSS changes to your browser since Jekyll doesn't rebuild the CSS
     .pipe(reload({stream: true}));
 });
-  
+
 // Optimizes the images that exists
 gulp.task("images", function () {
   return gulp.src("docs/assets/img/**")
@@ -81,14 +82,14 @@ gulp.task("images", function () {
     .pipe(gulp.dest("site/_gh_pages/assets/img"))
     .pipe($.size({title: "images"}));
 });
-  
+
 // Copy over fonts to the "site" directory
 gulp.task("fonts", function () {
   return gulp.src("docs/assets/fonts/**")
     .pipe(gulp.dest("site/assets/fonts"))
     .pipe($.size({ title: "fonts" }));
 });
-  
+
 // Copy xml and txt files to the "site" directory
 gulp.task("copy", function () {
   return gulp.src(["_gh_pages/*.txt", "_gh_pages/*.xml"])
@@ -126,11 +127,11 @@ gulp.task("html", ["styles:prod"], function () {
     .pipe(gulp.dest("_gh_pages"))
     .pipe($.size({title: "optimizations"}));
 });
-  
-  
+
+
 // Deploys to Github Pages for live site !!WARNING do not run this task!!
 // Not that you can without ssh access to master repo anyway. Don't change either way.
-var options = { 
+var options = {
   remoteUrl: 'git@github.com:ucsf-web-services/shoestring.git',
   branch: 'gh-pages'
 };
@@ -139,7 +140,7 @@ gulp.task('deploy', function() {
   return gulp.src("./_gh_pages/**/*")
     .pipe($.ghPages(options));
 });
-  
+
 // Run JS Lint against your JS
 gulp.task("jslint", function () {
   gulp.src("./dist/js/*.js")
@@ -147,7 +148,7 @@ gulp.task("jslint", function () {
     .pipe($.jshint(".jshintrc"))
     .pipe($.jshint.reporter());
 });
-    
+
 // Browsersync serving server from _serve
 gulp.task("serve:dev", ["styles:dev", "jekyll:dev"], function () {
   bs = browserSync({
@@ -172,7 +173,7 @@ gulp.task("serve:prod", function () {
 
 gulp.task('test', function(done) {
   new Server({
-    configFile: karmaLocalConf, 
+    configFile: karmaLocalConf,
     singleRun: false
   }, done).start();
 });
@@ -189,8 +190,16 @@ gulp.task('remote-test', function(done) {
     singleRun: true
   }, done).start();
 });
+
+gulp.task('change-version-number', function() {
+  args.oldVersion === "old-version";
+  args.newVersion === "new-version";
+  gulp.src(['package.json'])
+  //.pipe($.replace(args.oldVersion, args.newVersion));
+});
+
 // configFile: __dirname + '/karma.conf-sauce.js',
-// Watch for changes 
+// Watch for changes
 gulp.task("watch", function () {
   gulp.watch(["docs/**/*.md", "docs/*.html", "docs/**/*.html", "docs/**/*.xml", "docs/**/*.txt", "docs/**/*.js", "docs/**/*.css"], ["jekyll-rebuild"]);
   gulp.watch(["dist/css/*.css"], reload);
@@ -198,12 +207,12 @@ gulp.task("watch", function () {
   gulp.watch(["js/*.js"], reload);
   gulp.watch(["scss/*.scss"], ["styles:dev"]);
 });
-    
+
 // Default task, run when just writing "gulp" in the terminal
 gulp.task("default", ["serve:dev", "watch"]);
 // Checks your CSS, JS and Jekyll for errors
 gulp.task("check", ["jslint", "doctor"], function () {});
-// Builds the _gh_pages for production, but doesn't serve it to you. 
+// Builds the _gh_pages for production, but doesn't serve it to you.
 gulp.task("build", ["jekyll:prod", "styles:prod"], function () {});
 
 // Builds your site with the "build" command and then runs all the optimizations on
