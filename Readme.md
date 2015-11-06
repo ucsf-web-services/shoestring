@@ -1,4 +1,4 @@
-# Shoestring  [![Build Status](https://travis-ci.org/ucsf-web-services/shoestring.svg?branch=master)](https://travis-ci.org/ucsf-web-services/shoestring)[![Dependency Status](https://david-dm.org/ucsf-web-services/shoestring.svg)](https://david-dm.org/ucsf-web-services/shoestring)
+# Shoestring  [![Build Status](https://travis-ci.org/ucsf-web-services/shoestring.svg?branch=master)](https://travis-ci.org/ucsf-web-services/shoestring)[![devDependency Status](https://david-dm.org/ucsf-web-services/shoestring/dev-status.svg)](https://david-dm.org/ucsf-web-services/shoestring#info=devDependencies)
 
 [![Sauce Test Status](https://saucelabs.com/browser-matrix/shoestring.svg)](https://saucelabs.com/u/shoestring)
 
