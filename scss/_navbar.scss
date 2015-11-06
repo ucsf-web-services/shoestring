@@ -17,8 +17,11 @@
   }
 }
 
+.collapse {
+  display: none;
+}
+
 .navbar {
-  min-height: 40px;
   position: relative;
   border: 1px solid transparent;
 }
@@ -41,6 +44,10 @@
   a {
     text-decoration: none;
     color: #000;
+    display: block;
+    position: relative;
+    padding-top: 3px;
+    padding-bottom: 3px;
     &:hover {
       color: $electric-blue;
     }
@@ -59,9 +66,14 @@
       list-style-type: none;
       font-size: 15px;
       letter-spacing: .02em;
+      position: relative;
+      display: block;
       a {
         text-decoration: none;
         color: #000;
+        position: relative;
+        display: block;
+        padding: 15px 0 15px 0;
         &:hover {
           color: $electric-blue;
         }
