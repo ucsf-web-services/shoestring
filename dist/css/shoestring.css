@@ -561,8 +561,8 @@ th {
   line-height: 32px; }
 
 .btn-lg {
-  padding-right: 2em;
-  padding-left: 2em;
+  padding-right: 5em;
+  padding-left: 5em;
   font-size: 16px;
   line-height: 38px; }
 
@@ -578,6 +578,14 @@ th {
   background: transparent;
   border-color: #fff;
   color: #fff; }
+
+.btn-reg {
+  background-color: #007CBE;
+  color: #FFF; }
+  .btn-reg a {
+    color: #FFF; }
+  .btn-reg:hover {
+    background-color: #25b3ff; }
 
 /*------------------------------------*    GRID.CSS
 \*------------------------------------*/
