@@ -49,8 +49,8 @@
 }
 
 .btn-lg {
-  padding-right: 2em;
-  padding-left: 2em;
+  padding-right: 5em;
+  padding-left: 5em;
   font-size: 16px;
   line-height: 38px;
 }
@@ -74,4 +74,15 @@
 	background: transparent;
 	border-color: #fff;
 	color: #fff;
+}
+
+.btn-reg {
+  background-color: $light-blue;
+  color: #FFF;
+  a {
+    color: #FFF;
+  }
+  &:hover {
+    background-color: lighten($light-blue, 20%);
+  }
 }
