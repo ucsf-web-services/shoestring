@@ -1033,6 +1033,18 @@ fieldset {
 [role="button"] {
   cursor: pointer; }
 
+.header-tabs {
+  background-color: blue;
+  color: white;
+  text-align: center;
+  width: 200px; }
+  .header-tabs h2 {
+    margin: 0;
+    padding: 8px 8px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase; }
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
