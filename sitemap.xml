@@ -2,7 +2,7 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://github.com/ucsf-web-services/shoestring/</loc>
-    <lastmod>2015-11-06T10:26:32-08:00</lastmod>
+    <lastmod>2015-11-06T10:27:11-08:00</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -10,7 +10,7 @@
   
   <url>
     <loc>https://github.com/ucsf-web-services/shoestring/404/</loc>
-    <lastmod>2015-11-06T10:26:32-08:00</lastmod>
+    <lastmod>2015-11-06T10:27:11-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -19,7 +19,7 @@
   
   <url>
     <loc>https://github.com/ucsf-web-services/shoestring/about/</loc>
-    <lastmod>2015-11-06T10:26:32-08:00</lastmod>
+    <lastmod>2015-11-06T10:27:11-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -28,7 +28,7 @@
   
   <url>
     <loc>https://github.com/ucsf-web-services/shoestring/components/</loc>
-    <lastmod>2015-11-06T10:26:32-08:00</lastmod>
+    <lastmod>2015-11-06T10:27:11-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -37,7 +37,7 @@
   
   <url>
     <loc>https://github.com/ucsf-web-services/shoestring/css/</loc>
-    <lastmod>2015-11-06T10:26:32-08:00</lastmod>
+    <lastmod>2015-11-06T10:27:11-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -48,7 +48,7 @@
   
   <url>
     <loc>https://github.com/ucsf-web-services/shoestring/javascript/</loc>
-    <lastmod>2015-11-06T10:26:32-08:00</lastmod>
+    <lastmod>2015-11-06T10:27:11-08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

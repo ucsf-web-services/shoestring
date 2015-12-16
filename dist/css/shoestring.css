@@ -26,14 +26,29 @@ body {
  * and Firefox.
  * Correct `block` display not defined for `main` in IE 11.
  */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
   display: block; }
 
 /**
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-audio, canvas, progress, video {
+audio,
+canvas,
+progress,
+video {
   display: inline-block;
   /* 1 */
   vertical-align: baseline;
@@ -51,7 +66,8 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9/10.
  * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
  */
-[hidden], template {
+[hidden],
+template {
   display: none; }
 
 /* Links
@@ -65,7 +81,8 @@ a {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-a:active, a:hover {
+a:active,
+a:hover {
   outline: 0; }
 
 /* Text-level semantics
@@ -79,7 +96,8 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
  */
-b, strong {
+b,
+strong {
   font-weight: bold; }
 
 /**
@@ -112,7 +130,8 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-sub, sup {
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
@@ -162,7 +181,10 @@ pre {
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-code, kbd, pre, samp {
+code,
+kbd,
+pre,
+samp {
   font-family: monospace, monospace;
   font-size: 1em; }
 
@@ -178,7 +200,11 @@ code, kbd, pre, samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
  */
-button, input, optgroup, select, textarea {
+button,
+input,
+optgroup,
+select,
+textarea {
   color: inherit;
   /* 1 */
   font: inherit;
@@ -198,7 +224,8 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
  * Correct `select` style inheritance in Firefox.
  */
-button, select {
+button,
+select {
   text-transform: none; }
 
 /**
@@ -208,7 +235,10 @@ button, select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-button, html input[type="button"], input[type="reset"], input[type="submit"] {
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
   cursor: pointer;
@@ -217,13 +247,15 @@ button, html input[type="button"], input[type="reset"], input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-button[disabled], html input[disabled] {
+button[disabled],
+html input[disabled] {
   cursor: default; }
 
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-button::-moz-focus-inner, input::-moz-focus-inner {
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
@@ -241,7 +273,8 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -252,7 +285,8 @@ input[type="checkbox"], input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
 /**
@@ -271,7 +305,8 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
 /**
@@ -314,29 +349,26 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-td, th {
+td,
+th {
   padding: 0; }
 
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table; }
+
 .clearfix:after {
   clear: both; }
 
-/*------------------------------------*\
-BASE
+/*------------------------------------*BASE
 \*------------------------------------*/
-/*------------------------------------*\
-UI ELEMENTS
+/*------------------------------------*UI ELEMENTS
 \*------------------------------------*/
-/*------------------------------------*\
-$GRID SETTINGS
+/*------------------------------------*$GRID SETTINGS
 \*------------------------------------*/
-/*------------------------------------*\
-$BREAKPOINTS
+/*------------------------------------*$BREAKPOINTS
 \*------------------------------------*/
-/*------------------------------------*\
-$TYPOGRAPHY
+/*------------------------------------*$TYPOGRAPHY
 \*------------------------------------*/
 /**
 * Mobile Sizes
@@ -348,20 +380,15 @@ $TYPOGRAPHY
 /**
 * Optional font sizes
 */
-/*------------------------------------*\
-$LINKS
+/*------------------------------------*$LINKS
 \*------------------------------------*/
-/*------------------------------------*\
-$FORMS
+/*------------------------------------*$FORMS
 \*------------------------------------*/
-/*------------------------------------*\
-$BUTTONS
+/*------------------------------------*$BUTTONS
 \*------------------------------------*/
-/*------------------------------------*\
-$HEADINGS
+/*------------------------------------*$HEADINGS
 \*------------------------------------*/
-/*------------------------------------*\
-    ACCORDION.CSS
+/*------------------------------------*    ACCORDION.CSS
 \*------------------------------------*/
 .accordion__header:after {
   content: "\f107";
@@ -534,8 +561,8 @@ $HEADINGS
   line-height: 32px; }
 
 .btn-lg {
-  padding-right: 2em;
-  padding-left: 2em;
+  padding-right: 5em;
+  padding-left: 5em;
   font-size: 16px;
   line-height: 38px; }
 
@@ -552,8 +579,15 @@ $HEADINGS
   border-color: #fff;
   color: #fff; }
 
-/*------------------------------------*\
-    GRID.CSS
+.btn-reg {
+  background-color: #007CBE;
+  color: #FFF; }
+  .btn-reg a {
+    color: #FFF; }
+  .btn-reg:hover {
+    background-color: #25b3ff; }
+
+/*------------------------------------*    GRID.CSS
 \*------------------------------------*/
 .col1, .col2, .col3, .col4, .col5, .col6, .col7, .col8, .col9, .col10, .col11, .col12 {
   float: left;
@@ -685,8 +719,7 @@ $HEADINGS
 .mobile-12 {
   width: 100%; }
 
-/*------------------------------------*\
-    FORM ELEMENT STYLES
+/*------------------------------------*    FORM ELEMENT STYLES
 \*------------------------------------*/
 /**
  * Forms
@@ -701,7 +734,8 @@ input[type="search"] {
 /**
  * Input Elements
  */
-.text-input, textarea {
+.text-input,
+textarea {
   border: 1px #BFBFBF solid;
   padding: 0.3em 1em;
   background: #FAFAFA;
@@ -801,7 +835,8 @@ input[type="search"] {
 /**
  * Checkbox, Radio
  */
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
   margin-right: 0.5em; }
 
 /**
@@ -998,8 +1033,20 @@ fieldset {
 [role="button"] {
   cursor: pointer; }
 
+.header-tabs {
+  background-color: blue;
+  color: white;
+  text-align: center;
+  width: 200px; }
+  .header-tabs h2 {
+    margin: 0;
+    padding: 8px 8px;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase; }
+
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   color: inherit;
   line-height: 24px; }
@@ -1038,8 +1085,7 @@ h6, .h6 {
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px; }
 
-/*------------------------------------*\
-    TABLES.CSS
+/*------------------------------------*    TABLES.CSS
 \*------------------------------------*/
 /**
  * Table
@@ -1055,6 +1101,7 @@ table {
  */
 .table td, .table th {
   border-bottom: 1px #BFBFBF solid; }
+
 .table tr:hover > td {
   background: #989898; }
 
@@ -1070,6 +1117,7 @@ table {
     border-top-left-radius: 5px; }
   .table--bordered thead th:last-child {
     border-top-right-radius: 5px; }
+
 .table--bordered td, .table--bordered th {
   border: 1px #BFBFBF solid; }
 
@@ -1086,6 +1134,7 @@ th, td {
  */
 .table--simple td, .table--simple th {
   border-bottom: 1px #BFBFBF solid; }
+
 .table--simple tr:hover > td {
   background: #989898; }
 
