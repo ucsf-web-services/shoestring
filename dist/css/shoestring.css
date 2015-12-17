@@ -435,6 +435,34 @@ th {
   .ui-accordion--bordered .accordion__header:first-child {
     border-top-style: none; }
 
+a.accordion {
+  position: relative; }
+  a.accordion:before {
+    right: 100%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none; }
+  a.accordion:before {
+    border-width: 5px;
+    top: 20%;
+    left: 0;
+    border-top: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid grey; }
+  a.accordion.active:before {
+    border-width: 5px;
+    top: 37%;
+    left: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid grey; }
+
+a.accordion, .accordian-content {
+  padding-left: 20px; }
+
 /* Top Banner Styles */
 #ucsf-banner-nav {
   height: 40px;
