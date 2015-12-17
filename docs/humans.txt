@@ -4,6 +4,8 @@
 # TEAM
 
     Richard -- Lead Developer -- 
+    John Kealy -- Documentation --
+
 
 # THANKS
 
