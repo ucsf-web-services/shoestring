@@ -4,6 +4,8 @@
 
 [http://ucsf-web-services.github.io/shoestring](http://ucsf-web-services.github.io/shoestring)
 
+##What is shoestring?
+
 Shoestring is a front-end pattern library complementing the [UCSF Identity Guidelines](http://identity.ucsf.edu/website).
 
 ##Supported UCSF browsers
