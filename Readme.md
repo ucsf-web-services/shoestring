@@ -10,7 +10,7 @@ Shoestring is a front-end pattern library complementing the [UCSF Identity Guide
 
 ##Why Should I use Shoestring?
 
-Shoestring is a UCSF specific framework, so it provides a common pattern library for UCSF. Twitter bootstrap and other frameworks will require you to modify the framework to meet UCSF standards. Also since this is UCSF focused we can be more agile and provide what is important to UCSF, and you can easily become part of the team and *[contribute](https://github.com/ucsf-web-services/shoestring/blob/master/CONTRIBUTING.md.
+Shoestring is a UCSF specific framework, so it provides a common pattern library for UCSF. Twitter bootstrap and other frameworks will require you to modify the framework to meet UCSF standards. Also since this is UCSF focused we can be more agile and provide what is important to UCSF, and you can easily become part of the team and [contribute](https://github.com/ucsf-web-services/shoestring/blob/master/CONTRIBUTING.md).
 
 ##How do I use it?
 
